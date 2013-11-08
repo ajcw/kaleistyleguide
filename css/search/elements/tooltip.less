@@ -1,0 +1,38 @@
+@import "../_imports";
+
+.tooltip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 220px;
+    background: #FFF;
+    border-radius: 8px;
+    .box-shadow(2px 2px 10px rgba(0, 0, 0, 0.5));
+    z-index: 1;
+
+    /* .transition(0.1s, left, cubic-bezier(0.455, 0.03, 0.515, 0.955)); */
+    .translateZHack();
+}
+
+.tooltip-offers {
+    list-style: none;
+    padding: 5px 10px;
+    margin: 0;
+
+    .offer {
+        padding: 5px 0;
+        color: @offer-color;
+        line-height: 15px;
+
+        + .offer {
+            border-top: 1px solid #B3B3B3;
+        }
+    }
+}
+
+.icon--tooltip-arrow {
+    position: absolute;
+    left: 50%;
+    bottom: -18px;
+    margin-left: -17.5px;
+}

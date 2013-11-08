@@ -1,0 +1,125 @@
+/**
+ * This sheet is used to house the many icons used on the new versions
+ * of the consumer site.
+ *
+ * Each icon is named in the following format: `icon--{description}`. The
+ * description should be the same as the image filename to make them easier
+ * to find.
+ *
+ * Each icon, and it's states, should be an inidividaul image. During the build
+ * process, these files are added to a sprite so there is no need to do i manually
+ *
+ */
+
+@import "../_imports";
+
+.icon {
+    width: 18px;
+    height: 18px;
+    display: block;
+    background-repeat: no-repeat;
+
+    &.icon--calendar {
+        width: 23px;
+        height: 23px;
+        background-image: url('@{image-path}/icons/calendar.png');
+    }
+
+    &.icon--calendar-large {
+        width: 27px;
+        height: 27px;
+        background-image: url('@{image-path}/icons/calendar-large.png');
+    }
+
+    &.icon--collapse {
+        width: 12px;
+        height: 12px;
+        background-image: url('@{image-path}/icons/collapse.png');
+        cursor: pointer;
+
+        &.hover,
+        &:hover {
+            background-image: url('@{image-path}/icons/collapse--hover.png');
+        }
+
+        &:active {
+            background-image: url('@{image-path}/icons/collapse--active.png');
+        }
+    }
+
+    &.icon--clock {
+        width: 23px;
+        height: 23px;
+        background-image: url('@{image-path}/icons/clock.png');
+    }
+
+    &.icon--clock-large {
+        width: 27px;
+        height: 27px;
+        background-image: url('@{image-path}/icons/clock-large.png');
+    }
+
+    &.icon--close {
+        width: 12px;
+        height: 12px;
+        background-image: url('@{image-path}/icons/close_popup.svg');
+    }
+
+    &.icon--dinerschoice-bubble {
+        width: 37px;
+        height: 28px;
+        background-image: url('@{image-path}/@{domain}/icons/dinerschoice-seachbox.png');
+    }
+
+    &.icon--tooltip-arrow {
+        width: 35px;
+        background-image: url('@{image-path}/icons/tooltip-arrow.png');
+    }
+
+    &.icon--expand {
+        width: 12px;
+        height: 12px;
+        background-image: url('@{image-path}/icons/expand.png');
+        cursor: pointer;
+
+        &.hover,
+        &:hover {
+            background-image: url('@{image-path}/icons/expand--hover.png');
+        }
+
+        &:active {
+            background-image: url('@{image-path}/icons/expand--active.png');
+        }
+    }
+
+    &.icon--person {
+        width: 23px;
+        height: 23px;
+        background-image: url('@{image-path}/icons/person.png');
+    }
+
+    &.icon--person--large {
+        width: 27px;
+        height: 27px;
+        background-image: url('@{image-path}/icons/person-large.png');
+    }
+
+    &.icon--pin {
+        background-image: url('@{image-path}/@{domain}/icons/pin.png');
+    }
+
+    &.icon--pin-small {
+        width: 11px;
+        height: 15px;
+        background-image: url('@{image-path}/icons/pin-small.png');
+
+        &.hover,
+        &:hover {
+            background-image: url('@{image-path}/icons/pin-small-hover.png');
+        }
+    }
+
+    &.icon--menu {
+        background-image: url('@{image-path}/@{domain}/icons/menu.png');
+    }
+}

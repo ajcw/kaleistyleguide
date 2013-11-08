@@ -1,0 +1,165 @@
+@import "../_imports";
+
+.map-navigation {
+    padding: @map-navigation-padding;
+    border: 1px solid @table-border-color;
+    border-width: 0 1px;
+    font-weight: bold;
+    overflow: hidden;
+    clear: both;
+
+    &.footer {
+        border-bottom: 1px solid @table-border-color;
+    }
+}
+
+.map-controls {
+    width: @map-results-width - (@map-navigation-padding-horizontal);
+    font-weight: bold;
+    float: right;
+
+    .prev,
+    .next {
+        color: #333;
+
+        text-decoration: none;
+
+        &:hover {
+            color: @link-color;
+        }
+
+        &.disabled {
+            cursor: text;
+            color: #B8B4AC;
+
+            &:hover {
+                color: #B8B4AC;
+            }
+        }
+    }
+
+    .next {
+        float: right;
+    }
+}
+
+.map-container {
+
+    + .map-controls {
+        padding: @map-navigation-padding;
+        margin-bottom: 10px;
+    }
+}
+
+.map-placeholder {
+    width: 448px;
+    height: 500px;
+    background: grey;
+    border: 1px solid @table-border-color;
+    border-right: 0;
+    float: left;
+}
+
+.map-results {
+
+    .results-list {
+        width: @map-results-width;
+        height: 500px;
+        border: 1px solid @table-border-color;
+        margin-bottom: 0;
+        float: right;
+        overflow-y: auto;
+
+        .result {
+            padding: 15px 0 15px 15px;
+            border-bottom: 1px dashed @table-border-color;
+
+            &.hover {
+                background: #E6E6E6;
+            }
+        }
+
+        .icon--pin-small {
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .rest-name {
+            margin-bottom: 8px;
+            display: inline;
+            line-height: 15px;
+            vertical-align: top;
+
+        }
+
+        .distance {
+            margin-right: 14px;
+            font-size: 12px;
+            float: right;
+        }
+
+        .star-rating-container {
+            margin-top: 8px;
+            display: block;
+        }
+
+        .timeslots {
+            margin-top: 10px;
+        }
+
+        .availability-link {
+            padding: 10px 0 10px 10px;
+        }
+    }
+}
+
+/*
+When the show restaurant image test is enabled
+reduce the width of the restaurant content to accomodate
+for the image
+*/
+.showrestaurantimages {
+
+    .map-results {
+        .rest-content {
+            width: 205px;
+        }
+    }
+}
+
+.map-no-results {
+
+    h2 {
+        background: #F2F2F2;
+        margin: 0;
+    }
+
+    h2,
+    .block {
+        padding: 6px 10px;
+    }
+
+    .block {
+        margin-bottom: 10px;
+    }
+
+}
+
+.map-pin-hover {
+    font-size: 10px;
+
+    strong {
+        font-size: 12px;
+    }
+}
+
+#search_results_map {
+    .restaurant-modal {
+        .booking-message {
+            margin-bottom: 8px;
+            color: @map-restaurant-booking-message-color;
+            font-size: @map-restaurant-booking-message-font-size;
+            display: block;
+        }
+    }
+}

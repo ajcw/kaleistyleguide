@@ -1,0 +1,174 @@
+@import "../_imports";
+
+.results-table {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+
+    .applied-filters {
+        padding: 10px 0 3px 0;
+
+        .applied-filter {
+            background: @applied-filter-bg-color;
+            color: @applied-filter-color;
+            padding: 2px 3px 3px 4px;
+            margin-left: 10px;
+            border: 1px solid @applied-filter-border-color;
+            border-radius: @applied-filter-border-radius;
+
+            + .applied-filter {
+                margin-left: 4px;
+            }
+
+            .close {
+                position: relative;
+                top: 1px;
+                vertical-align: top;
+                padding-left: 4px;
+                background-position: 4px 0;
+                display: inline-block;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.results-list-header {
+    .gradient(
+        @results-list-header-gradient--top,
+        @results-list-header-gradient--bottom,
+        @results-list-header-gradient--fallback
+    );
+
+    color: @results-list-header-color;
+    font-size: 11px;
+    font-weight: bold;
+
+    .header-cell-link {
+        color: @results-list-header-color;
+        text-decoration: @results-list-header-link-decoration;
+
+        &:hover {
+            color: @results-list-header-color--hover;
+            text-decoration: @results-list-header-link-decoration--hover;
+        }
+
+        &.sorted {
+            padding-right: 12px;
+            background-image: @results-list-header-link-sorted;
+            background-position: center right;
+            background-repeat: no-repeat;
+        }
+    }
+
+    td {
+        border-bottom: 1px @results-list-header-border-style @results-list-header-border-color;
+    }
+
+    .availability-header {
+        text-align: center;
+    }
+}
+
+.results-list {
+    width: 100%;
+    background-color: #FFF;
+    border-collapse: separate;
+    margin-bottom: 15px;
+
+    td {
+        font-size: 11px;
+    }
+
+    .rest-content {
+        width: 270px;
+        display: inline-block;
+    }
+
+    .rest-image {
+        margin-right: 10px;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .rest-name {
+        color: @results-list-rest-name-color;
+        font-size: 12px;
+        font-weight: bold;
+        display: inline-block;
+        .underlined();
+
+        &:hover {
+            color: @results-list-rest-name-color--hover;
+        }
+    }
+
+    .offer {
+        color: @offer-color;
+        font-weight: bold;
+        display: block;
+        cursor: pointer;
+        .underlined();
+    }
+
+    .price-col {
+        width: 45px;
+        font-size: 12px;
+    }
+
+    .ratings-col {
+        width: 85px;
+        font-size: 9px;
+
+        .stars {
+            margin-bottom: 4px;
+        }
+
+        .reviews {
+            display: block;
+            margin: 0;
+        }
+    }
+
+    .availability-col {
+        width: 272px;
+
+        .timeslot-link {
+            text-decoration: none;
+        }
+    }
+
+    .no-result-message {
+        font-size: 12px;
+        margin: 4px 0 10px 0;
+
+        &.italic {
+            font-style: italic;
+        }
+
+        .link {
+            color: @link-color;
+            font-size: 11px;
+            font-weight: bold;
+
+            &:hover {
+                color: @link-color--hover;
+            }
+        }
+    }
+
+    .not-available-message {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+}
+
+.availability-link {
+    margin: 5px 0;
+    display: block;
+    color: @link-color;
+
+    &:hover {
+        color: @link-color--hover;
+    }
+}

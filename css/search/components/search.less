@@ -1,0 +1,96 @@
+@import "../_imports";
+
+.search-results-container {
+    position: relative;
+    width: 756px;
+    margin: 0 15px 20px 0;
+    float: right;
+}
+
+.search-control {
+    min-width: 600px;
+    color: @search-control-block-input-color;
+
+    .block {
+        background: #FFF;
+        padding: 2px;
+        border: 2px solid @search-control-block-border-color;
+        border-radius: 3px;
+        margin-right: 15px;
+        float: left;
+
+        label {
+            margin-bottom: @search-control-block-input-margin-bottom;
+            display: block;
+            font-size: 11px;
+            display: none;
+
+            span {
+                font-size: 10px;
+                margin-left: @search-control-block-span-margin-left;
+            }
+        }
+
+        input,
+        select {
+            width: 100px;
+
+            .gradient(
+                @select-gradient--top,
+                @select-gradient--bottom,
+                @select-gradient--fallback,
+            50%, 100%);
+
+            border: none;
+            margin: 0;
+            font-size: 14px;
+            font-weight: normal;
+            word-spacing: @search-control-block-input-color-word-spacing;
+        }
+    }
+
+    > .icon {
+        margin: 4px 8px 0 0;
+        float: left;
+    }
+
+    &.labels {
+        min-width: 500px;
+        padding: 0 @search-container-padding-horizontal;
+
+        .block {
+            background: transparent;
+            padding: @search-control-block-padding;
+            border: none;
+            border-right: 1px dashed @search-control-block-border-color--labels;
+        }
+
+        label {
+            color: @search-control-block-label-color;
+            display: block;
+        }
+
+        input,
+        select {
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        select {
+            width: 90px;
+            height: @search-control-block-select-height;
+            padding: @search-control-block-select-padding;
+        }
+
+        .btn-search {
+            padding: 4px 15px;
+            line-height: 16px;
+            margin-top: @search-control-btn-margin-top;
+        }
+
+        > .icon {
+            display: none;
+        }
+    }
+
+}

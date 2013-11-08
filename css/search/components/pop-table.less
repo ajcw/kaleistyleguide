@@ -1,0 +1,55 @@
+@import "../_imports";
+
+.pop-table {
+
+    .table-header {
+        .gradient(
+            @poptable-header-gradient--top,
+            @poptable-header-gradient--bottom,
+            @poptable-header-gradient--fallback
+        );
+
+        .title {
+            color: @poptable-title-color;
+        }
+
+        .link {
+            color: @poptable-link-color;
+            font-weight: normal;
+
+            &:hover {
+                color: @poptable-link-color--hover;
+            }
+        }
+    }
+
+    td {
+        background: @poptable-bg;
+        border-top: 1px dashed @poptable-border-color;
+        border-bottom: none;
+    }
+
+    .first-row {
+        td {
+            border-top: @poptable-first-row-border;
+        }
+    }
+
+    .last-row.see-all-link {
+        td {
+            background: #FFF;
+            border-top: @poptable-last-row-border;
+
+            .link {
+                color: @poptable-see-all-link;
+                text-decoration: none;
+
+                &:hover {
+                    color: @poptable-see-all-link--hover;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+}

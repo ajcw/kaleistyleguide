@@ -1,0 +1,168 @@
+@import "../_imports";
+
+.page-wrapper {
+    background: #FFF;
+}
+
+.global-header {
+    box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.3);
+}
+
+.cover-image {
+    position: relative;
+    /* box-shadow: 0 36px 74px rgba(0, 0, 0, 0.4); */
+
+    img {
+        width: 100%;
+        height: auto;
+        vertical-align: top;
+    }
+
+    .heading {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        padding: 100px 20px 20px 20px;
+        /* background: rgba(0, 0, 0, 0.5); */
+        margin: 0;
+        color: #FFF;
+        font-size: 2.2em;
+
+        .gradient(
+            rgba(0,0,0,0),
+            rgba(0,0,0,0.85),
+            rgba(0,0,0,0)
+        );
+
+        .box-sizing();
+    }
+}
+
+.search-control-full {
+    position: relative;
+    width: 100%;
+    background: @clp-search-control-bg;
+    padding: 10px 0;
+    margin-bottom: 18px;
+
+    span {
+        position: absolute;
+        top: 18px;
+        left: 20px;
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+    .search-control {
+        margin-left: 178px;
+        float: left;
+
+        .btn-search {
+            padding: 7px 15px;
+        }
+    }
+}
+
+.search-filters {
+
+    .search-filters-header {
+        padding: 6px 0 0 0;
+        background: #fff;
+
+        .title {
+            display: none;
+        }
+    }
+
+    .search-filters-inner {
+        padding: 0;
+        background: #fff;
+    }
+}
+
+.result {
+    min-height: 195px;
+    border: 1px solid #DCD9D6;
+    border-radius: 6px;
+    margin-bottom: 18px;
+    overflow: hidden;
+
+    .rest-image {
+        width: 195px;
+        min-height: 195px;
+        margin-right: 0;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: auto;
+            vertical-align: top;
+        }
+    }
+
+    .rest-content {
+        width: 537px;
+        padding: 16px 10px 0 8px;
+
+        .rest-info {
+            margin-bottom: 10px;
+        }
+    }
+
+    h2 {
+        margin: 0 0 10px 0;
+    }
+
+    h4 {
+        margin: 0;
+    }
+
+    .rest-name {
+        margin-bottom: 10px;
+    }
+
+    .rest-description {
+        line-height: 16px;
+    }
+}
+
+.group {
+
+    ul {
+        padding: 2px 5px 8px 8px;
+        border: none;
+    }
+
+    + .group {
+
+        ul {
+            padding-top: 8px;
+            border: none;
+        }
+    }
+}
+
+.group-item {
+    margin: 2px 0;
+}
+
+.timeslotss {
+    margin-bottom: 10px;
+
+    .timeslot {
+        min-width: 84px;
+        margin: 0;
+
+        + .timeslot {
+            margin: 0 0 0 1.2%;
+        }
+
+        .time {
+            width: 100% !important;
+            height: 26px;
+            line-height: 26px;
+            font-size: 13px;
+        }
+    }
+}

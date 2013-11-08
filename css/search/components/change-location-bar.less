@@ -1,0 +1,35 @@
+@import "../_imports";
+
+.change-location-bar {
+    padding: @change-location-bar-padding;
+    border: @change-location-bar-border;
+    border-radius: @change-location-bar-border-radius;
+    margin-bottom: @change-location-bar-margin-bottom;
+
+    .gradient(
+        @change-location-bar-gradient--top,
+        @change-location-bar-gradient--bottom,
+        @change-location-bar-gradient--fallback
+    );
+
+    font-size: 17px;
+    font-weight: bold;
+
+    h1 {
+        margin: 0;
+        display: inline;
+        font-size: inherit;
+    }
+
+    .change-location-link {
+        font-size: 16px;
+        color: inherit;
+        text-decoration: none;
+        float: right;
+        cursor: pointer;
+
+        &:hover {
+            color: @change-location-bar-link-color--hover;
+        }
+    }
+}

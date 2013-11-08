@@ -1,0 +1,22 @@
+@import "../_imports";
+
+.breadcrumbs {
+    background: @breadcrumbs-bg-color;
+    padding: @breadcrumbs-padding;
+    border-bottom: @breadcrumbs-border-bottom-width solid @breadcrumbs-border-bottom-color;
+    line-height: 1;
+
+    .breadcrumb {
+        color: @breadcrumbs-color;
+        text-decoration: none;
+    }
+
+    .breadcrumbs-link {
+        text-decoration: @breadcrumbs-text-decoration;
+
+        &:hover {
+            text-decoration: @breadcrumbs-text-decoration--hover;
+        }
+    }
+
+}

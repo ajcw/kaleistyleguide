@@ -1,0 +1,207 @@
+@import "../_imports";
+
+.breadcrumbs {
+    margin-bottom: 10px;
+}
+
+.icon--dinerschoice-bubble {
+    display: inline-block;
+}
+
+.change-location-bar {
+
+    .search-location {
+        padding: 6px;
+        display: inline-block;
+        vertical-align: top;
+        color: @diners-choice-search-location--color;
+    }
+}
+
+.search-container {
+    position: relative;
+    width: 756px;
+
+    .gradient(
+        @diners-choice-search-container-gradient--top,
+        @diners-choice-search-container-gradient--bottom,
+        @diners-choice-search-container-gradient--fallback
+    );
+
+    border-radius: 6px;
+    margin: 0 16px 10px 0;
+    float: right;
+
+    .search-control {
+        background: @diners-choice-search-control-bg;
+        border-radius: 0 0 6px 6px;
+        border: 1px solid @table-border-color;
+        border-top: none;
+        color: #333;
+
+        input,
+        select {
+            border: 1px solid #B3B3B3;
+
+            .gradient(
+                @diners-choice-search-control-input-gradient--top,
+                @diners-choice-search-control-input-gradient--bottom,
+                @diners-choice-search-control-input-gradient--fallback
+            );
+
+            font-weight: normal;
+        }
+
+        label,
+        label > span {
+            color: #333;
+        }
+
+        .block {
+            border: none;
+        }
+    }
+}
+
+.change-location-bar {
+    background: transparent;
+    padding: 6px 14px;
+    border-bottom: none;
+    border-radius: @component-border-radius @component-border-radius 0 0;
+    margin-bottom: 0;
+    font-size: 16px;
+
+    .gradient(
+        @diners-choice-change-location-bar-gradient--top,
+        @diners-choice-change-location-bar-gradient--bottom,
+        @diners-choice-change-location-bar-gradient--fallback
+    );
+}
+
+.search-filters-inner {
+
+    .nav-link {
+        color: @link-color;
+        padding: 3px 9px;
+        display: block;
+        text-decoration: none;
+
+        + b {
+            margin-top: 6px;
+        }
+
+        &:hover {
+            color: @link-color--hover;
+            text-decoration: underline;
+        }
+    }
+
+    b {
+        padding: 3px 9px;
+        display: block;
+    }
+
+    .group-item {
+        padding-left: 1px;
+        margin: 5px 0;
+    }
+}
+
+.group {
+
+    &.dinerschoice {
+        margin-bottom: 10px;
+    }
+}
+
+.table-header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    .gradient(
+        @diners-choice-search-container-gradient--top,
+        @diners-choice-search-container-gradient--bottom,
+        @diners-choice-search-container-gradient--fallback
+    );
+
+    color: @diners-choice-search-location--color;
+
+    .applied-filters {
+        display: none;
+    }
+}
+
+.results-list-header {
+    background: @diners-choice-results-list-header-bg;
+
+    .header-cell {
+        min-width: 90px;
+    }
+}
+
+.search-results-container {
+
+    .ad-iframe {
+        width: 315px;
+        float: right;
+    }
+}
+
+.seo-footer.columns {
+    width: 74%;
+    padding: 20px 13%;
+}
+
+.search-filters-inner {
+
+    a {
+        display: block;
+        text-decoration: none;
+    }
+}
+
+.location-modal {
+    padding: 15px;
+    font-size: 12px;
+
+    a {
+        display: block;
+        text-decoration: none;
+    }
+
+    .group {
+        margin-left: 10px;
+    }
+
+    .group-item {
+        margin: 5px 0;
+    }
+
+    .sub-list {
+        margin-left: 7px;
+        padding-top: 1px;
+    }
+}
+
+.diners-choice-tagline {
+    font-size: 12px;
+    clear: both;
+}
+
+/*
+ * Set the diners choice list width to half to accommodate for
+ * the advert on OT when it's not an availability request
+ */
+.com {
+
+    .search-results {
+        width: 425px;
+    }
+
+    &.availability-search {
+
+        .search-results {
+            width: 100%;
+        }
+    }
+}

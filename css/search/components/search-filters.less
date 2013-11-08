@@ -1,0 +1,191 @@
+@import "../_imports";
+
+.search-filters-outer {
+    position: relative;
+    width: @search-filters-width;
+    margin: 0 15px;
+    float: left;
+
+    .tooltip {
+        position: relative;
+        width: @search-filters-width - (@search-filters-tooltip-padding * 2);
+        padding: 10px;
+        margin-bottom: 15px;
+        box-shadow: none;
+        color: #FFF;
+        font: italic 16px Georgia;
+        text-align: justify;
+
+        .gradient(@search-filters-tooltip-bg--top, @search-filters-tooltip-bg--bottom, @search-filters-tooltip-bg--fallback);
+
+        &:before {
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border: 10px solid @search-filters-tooltip-bg--bottom;
+            border-left-color: rgba(0, 0, 0, 0);
+            border-right-color: rgba(0, 0, 0, 0);
+            border-bottom: none;
+            content: "";
+            z-index: 1;
+            margin-left: -10px;
+        }
+    }
+}
+
+.search-filters {
+    position: relative;
+    width: @search-filters-width;
+    margin-bottom: 15px;
+    z-index: 1;
+    .translateZHack();
+
+    .search-filters-header {
+        color: @search-results-header-color;
+        padding: 9px 10px;
+
+        .gradient(
+            @search-filters-header-gradient--top,
+            @search-filters-header-gradient--bottom,
+            @search-filters-header-gradient--fallback
+        );
+
+        border: 1px solid @search-filters-header-border-color;
+        border-width: 1px 1px 0 1px;
+        border-radius: @component-border-radius @component-border-radius 0 0;
+
+        .double-border-tlr(
+            @search-filters-header-inner-border-color,
+            @search-filters-header-inner-border-width
+        );
+    }
+
+    .title {
+        margin: 0;
+    }
+}
+
+.search-filters-inner {
+    padding: 2px 0;
+    border: 1px solid @search-filters-header-border-color;
+    border-top: none;
+    font-size: 11px;
+    border-radius: 0 0 @component-border-radius @component-border-radius;
+    background: @search-filters-inner-bg;
+
+    + .search-filters-header {
+        margin-top: 15px;
+    }
+}
+
+.diners-choice-list {
+
+    .search-filters-inner {
+        padding-bottom: 6px;
+    }
+}
+
+.group {
+    list-style: none;
+    overflow: hidden;
+
+    + .group {
+        clear: both;
+
+        ul {
+            border-top: 1px solid @search-filters-header-border-color;
+        }
+    }
+
+    &.links {
+
+        label {
+            color: @link-color;
+
+            &:hover {
+                color: @link-color--hover;
+            }
+        }
+    }
+
+    ul {
+        padding: 5px 5px 5px 8px;
+        margin: 0;
+    }
+
+    .title {
+        padding: 0 0 4px 0;
+        display: block;
+        font-weight: bold;
+        clear: both;
+    }
+
+    .link {
+        padding: 3px 10px;
+        display: block;
+        color: @link-color;
+        text-decoration: none;
+
+        &:hover {
+            color: @link-color--hover;
+        }
+
+        &.selected {
+            background: @search-filters-link--selected-background;
+            color: @search-filters-link--selected-color;
+            cursor: default;
+        }
+    }
+
+    .sub-list {
+
+        .link {
+            padding-left: 20px;
+        }
+    }
+
+    .show-more {
+        position: relative;
+        color: @search-filters-more-link-color;
+        padding: 1px 4px 1px 16px;
+        margin: 1px 0;
+        display: inline-block;
+        cursor: pointer;
+        .underlined();
+        z-index: 1;
+
+        &:hover {
+            color: @search-filters-more-link-color--hover;
+        }
+
+        .mobile & {
+            margin-left: 110px;   /* here because of the weird overlapperable area */
+        }
+    }
+}
+
+.group-item {
+    margin: 1px 0;
+    display: block;
+    overflow: hidden;
+
+    &.disabled {
+        color: @disabled-color;
+    }
+}
+
+.availability-link {
+    margin: 5px 0 10px 0;
+}
+
+
+.line {
+    border-color: @line-color;
+
+    &.dashed {
+        border-top-width: 1px;
+        border-top-style: dashed;
+    }
+}

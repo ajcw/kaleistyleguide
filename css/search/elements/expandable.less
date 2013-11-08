@@ -1,0 +1,44 @@
+@import "../_imports";
+
+.expandable {
+
+    &.expanded {
+
+        .expand {
+            display: none;
+        }
+
+        .ellipsis {
+            display: none;
+        }
+
+        .extra-content {
+            display: inline;
+        }
+    }
+
+    .content {
+        display: inline;
+    }
+
+    .expand {
+        margin-top: 15px;
+        color: @link-color;
+        font-weight: bold;
+        text-decoration: none;
+        display: block;
+        vertical-align: top;
+
+        .icon {
+            margin-right: 4px;
+        }
+    }
+
+    .ellipsis {
+        display: inline;
+    }
+
+    .extra-content {
+        display: none;
+    }
+}

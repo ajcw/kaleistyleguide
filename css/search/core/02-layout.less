@@ -1,0 +1,24 @@
+@import "../_imports";
+
+body {
+    background: @body-bg-color;
+    color: @body-color;
+    font-size: @body-font-size;
+    font-family: @body-font-family;
+
+    &.interim {
+        overflow: hidden;
+    }
+}
+
+.page-wrapper {
+    width: @page-wrapper-width;
+    background: @page-wrapper-bg-color;
+    border: none;
+    border-radius: @page-wrapper-border-radius;
+    margin: @page-wrapper-margin-top auto 0 auto;
+}
+
+.content-wrapper {
+    padding: 15px;
+}

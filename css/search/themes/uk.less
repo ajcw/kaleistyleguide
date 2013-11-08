@@ -1,0 +1,697 @@
+@domain: 'tt';
+@image-path: '/s/content/images';
+
+
+
+/**
+ * ======================
+ *  TABLE OF CONTENTS
+ * ======================
+ *
+ * - Theme Variables
+ *
+ * - Core
+ * - Typography
+ * - Breadcrumbs
+ * - Forms
+ * - Tables
+ * - Timeslots
+ * - Buttons
+ * - Loader
+ *
+ * - Search Control
+ * - Search Control Tabs
+ * - Search Filters
+ * - Search Filter Modals
+ * - Search Results
+ * - Search Results Map
+ *
+ * - LiteBox
+ * - Calendar
+ *
+ * - POP
+ * - Diners Choice
+ * - API error page
+ * - A/B Tests
+ *
+ */
+
+
+
+
+
+/********** START OF THEME VARIABLES STYLES **********/
+
+@link-color: #05939A;
+@link-color--hover: #26BCBD;
+@error-color: #F00;
+@offer-color: #C06;
+@disabled-color: #B8B4AC;
+@line-color: #B8B4AC;
+@component-border-radius: 6px;
+
+@table-border-color: #B3B3B3;
+
+@primary-gradient--top: @link-color;
+@primary-gradient--bottom: @link-color--hover;
+@primary-gradient--fallback: @link-color;
+
+@secondary-gradient--top: #444;
+@secondary-gradient--bottom: #000;
+@secondary-gradient--fallback: #000;
+
+/********** END OF THEME VARIABLES STYLES **********/
+
+
+
+/********** START OF CORE STYLES **********/
+
+/**
+ * Body
+ */
+@body-bg-color: #FFF;
+@body-color: #333;
+@body-font-size: 11px;
+@body-font-family: Arial, Verdana, sans-serif;
+
+
+
+/**
+ * Page Wrapper
+ */
+@page-wrapper-width: 980px;
+@page-wrapper-bg-color: #FFF;
+@page-wrapper-border-radius: 0;
+@page-wrapper-margin-top: 0;
+
+
+
+/**
+ * Global Header
+ */
+@global-header-margin-top: 10px;
+@global-header-tagline-color: #999;
+@global-header-tagline-margin-top: 23px;
+@global-header-tagline-margin-left: 105px;
+@global-header-tagline-font-size: 14px;
+@global-header-tagline-font-weight: bold;
+
+
+
+/**
+ * Logo Position
+ */
+@logo-margin: 9px 0 14px 18px;
+
+
+
+/**
+ * Global Header Navigation
+ */
+@global-nav-top: 12px;
+@global-nav-right: 20px;
+@global-nav-color: @link-color;
+@global-nav-link-padding-top: 1px;
+@global-nav-link-padding: @global-nav-link-padding-top 6px 0 7px;
+@global-nav-link-border-color: #BFBFBF;
+@global-nav-link-text-decoration: none;
+@global-nav-link-text-decoration--hover: underline;
+@global-nav-link-background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAALCAMAAACJUBfdAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIFdpbmRvd3MiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NkE4OTM1NTVCMEUxMTFFMkIwNkM4QkU4NzVFQTYwNzkiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NkE4OTM1NTZCMEUxMTFFMkIwNkM4QkU4NzVFQTYwNzkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2QTg5MzU1M0IwRTExMUUyQjA2QzhCRTg3NUVBNjA3OSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo2QTg5MzU1NEIwRTExMUUyQjA2QzhCRTg3NUVBNjA3OSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Ppgpj88AAAAGUExURb+/vwAAAJl92WYAAAAOSURBVHjaYmDABgACDAAAFgAB1Uj3cAAAAABJRU5ErkJggg==');
+@global-nav-social-icon-display: none;
+@global-nav-link-line-height: 12px;
+@global-nav-link-min-height: 14px;
+@global-nav-link-padding-top--help: @global-nav-link-padding-top - 1;
+
+
+/**
+ * Global Footer
+ */
+@global-footer-color: #666;
+@global-footer-bg-color: transparent;
+@global-footer-text-decoration: none;
+@global-footer-text-decoration--hover: underline;
+
+@global-seofooter-background-color: #FFF;
+@global-seofooter-color: #666;
+@global-seofooter-h4-color: #0E8E8E;
+@global-seofooter-text-decoration: none;
+@global-seofooter-text-decoration--hover: underline;
+
+
+
+/**
+ * Placeholder advert - to be removed
+ */
+@ad-placeholder-margin-bottom: 5px;
+
+/********** END OF CORE STYLES **********/
+
+
+
+
+
+
+
+
+/********** START OF BREADCRUMBS STYLES **********/
+
+@breadcrumbs-color: #333;
+@breadcrumbs-bg-color: transparent;
+@breadcrumbs-padding: 13px 0 14px 20px;
+@breadcrumbs-border-bottom-width: 2px;
+@breadcrumbs-border-bottom-color: #FFF;
+@breadcrumbs-text-decoration: none;
+@breadcrumbs-text-decoration--hover: underline;
+
+/********** END OF BREADCRUMBS STYLES **********/
+
+
+
+
+
+
+
+
+/********** START OF FORM STYLES **********/
+
+@form-element-border-color: #B3B3B3;
+@text-input-padding-top: 5px;
+@text-input-padding-left: 4px;
+@select-padding: 4px;
+@select-line-height: 19px;
+@select-gradient--top: #FFF;
+@select-gradient--bottom: #E6E6E6;
+@select-gradient--fallback: #FFF;
+
+/********** END OF FORM STYLES **********/
+
+
+
+
+
+
+
+
+/********** START OF TIMESLOTS STYLES **********/
+
+@timeslots-color: #000;
+
+/* NORMAL */
+@timeslots-gradient--top: #FCFBFB;
+@timeslots-gradient--bottom: #CBC8C2;
+@timeslots-gradient--fallback: #FCFBFB;
+@timeslots-border-color: #B8B4AC;
+
+/* HOVER */
+@timeslots--hover-gradient--top: #F1F1ED;
+@timeslots--hover-gradient--bottom: #F9F9F7;
+@timeslots--hover-gradient--fallback: #F1F1ED;
+@timeslots--hover-border-color: #F1F1ED;
+
+/* ACTIVE */
+@timeslots--active-gradient--top: #F3EEE0;
+@timeslots--active-gradient--bottom: #F6F6F3;
+@timeslots--active-gradient--fallback: #F3EEE0;
+@timeslots--active-border-color: #ECECEC;
+
+/* DISABLED */
+@timeslots--disabled-gradient--top: #F1F1ED;
+@timeslots--disabled-gradient--bottom: #F9F9F7;
+@timeslots--disabled-gradient--fallback: #F1F1ED;
+@timeslots--disabled-border-color: #F1F1ED;
+
+/* 1000 Points */
+@timeslots-pts-color: #05939A;
+@timeslots-pts-font-size: 9px;
+
+/********** END OF TIMESLOTS STYLES **********/
+
+
+
+
+
+
+
+
+/********** START OF BUTTON STYLES **********/
+
+@btn-search-color: #FFF;
+@btn-search-padding: 4px 15px;
+@btn-search-gradient--top: @secondary-gradient--top;
+@btn-search-gradient--bottom: @secondary-gradient--bottom;
+@btn-search-gradient--fallback: @secondary-gradient--fallback;
+@btn-search-border-color: #000;
+@btn-search-border-radius: 6px 6px 0 0;
+
+/********** END OF BUTTON STYLES **********/
+
+
+
+
+
+
+
+
+/********** START OF LOADER **********/
+
+@loader-bg-color: #FFF;
+@loader-content-color: #333;
+@loader-content-opacity: 0.7;
+@loader-content-display--search: none;
+@loader-content-display--interim: none;
+
+@loader-border--interim: none;
+
+@interim-loader-image-path: '@{image-path}/@{domain}/interim-loader.gif';
+@search-loader-image-path: '@{image-path}/@{domain}/search-loader.gif';
+
+/********** END OF LOADER **********/
+
+
+
+
+
+
+
+
+
+/********** START OF CHANGE LOCATION BAR **********/
+
+@change-location-bar-padding: 9px 14px;
+@change-location-bar-border: 1px solid #B3B3B3;
+@change-location-bar-border-radius: 4px;
+@change-location-bar-margin-bottom: 10px;
+
+@change-location-bar-gradient--top: #FFF;
+@change-location-bar-gradient--bottom: #EDEDED;
+@change-location-bar-gradient--fallback: #FFF;
+
+@change-location-bar-link-color--hover: @link-color;
+
+/********** END OF CHANGE LOCATION BAR **********/
+
+
+
+
+
+
+
+
+
+/********** START OF SEARCH CONTROL STYLES **********/
+
+
+/**
+ * Search Container
+ */
+@search-container-padding-vertical: 6px;
+@search-container-padding-horizontal: 15px;
+@search-container-gradient--top: @link-color;
+@search-container-gradient--bottom: #26BCBD;
+@search-container-gradient--fallback: @link-color;
+
+/**
+ * Change Location Bar
+ */
+@search-control-change-location-bar-color: #FFF;
+@search-control-change-location-bar-color--hover: #FFF;
+@search-control-change-location-bar-bg-color: transparent;
+@search-control-change-location-bar-font-size: @body-font-size;
+@search-control-change-location-bar-border-bottom: 1px dashed #51E5E1;
+@search-control-change-location-bar-padding: 6px 15px 5px 15px;
+@search-control-change-location-link-margin-left: 15px;
+
+
+/**
+ * Search Element
+ */
+@search-control-block-border-color: #51E5E1;
+@search-control-block-border-color--labels: #51E5E1;
+@search-control-block-padding: 9px 14px 12px 0;
+@search-control-block-input-color: #42382C;
+@search-control-block-input-margin-bottom: 5px;
+@search-control-block-input-color-word-spacing: 0;
+@search-control-block-select-height: auto;
+@search-control-block-select-padding: @select-padding;
+@search-control-block-label-color: #FFF;
+@search-control-block-span-color: #FFF;
+@search-control-block-span-margin-left: 29px;
+
+@search-control-btn-margin-top: 28px;
+
+/********** END OF SEARCH CONTROL STYLES **********/
+
+
+
+
+
+
+
+
+
+/********** START OF SEARCH CONTROL TABS STYLES **********/
+
+@search-tabs-bg-color-top: @secondary-gradient--top;
+@search-tabs-bg-color-bottom: @secondary-gradient--bottom;
+@search-tabs-bg-color-fallback: @secondary-gradient--fallback;
+@search-tabs-border-color: #000;
+@search-tabs-line-height: 16px;
+@search-tabs-color: #FFF;
+@search-tabs-color--hover: #B3B3B3;
+@search-tabs-color--selected: #333;
+@search-tabs-bg-color--selected: #FFF;
+@search-tabs-border-color--selected: #C2C2C2;
+@search-tabs-border-bottom-color--selected: #FFF;
+
+/********** END OF SEARCH CONTROL TABS STYLES **********/
+
+
+
+
+
+
+
+
+/********** START OF SEARCH FILTERS STYLES **********/
+
+@search-filters-width: 178px;
+@search-filters-more-link-color: @link-color;
+@search-filters-more-link-color--hover: @link-color--hover;
+
+@search-filters-inner-bg: #FFF;
+
+@search-filters-link--selected-color: #FFF;
+@search-filters-link--selected-background: @link-color;
+
+@search-filters-header-gradient--top: @secondary-gradient--top;
+@search-filters-header-gradient--bottom: @secondary-gradient--bottom;
+@search-filters-header-gradient--fallback: @secondary-gradient--fallback;
+@search-filters-header-border-color: #B3B3B3;
+@search-filters-header-inner-border-color: transparent;
+@search-filters-header-inner-border-width: 0;
+
+@search-filters-tooltip-padding: 10px;
+@search-filters-tooltip-bg--top: #D37D33;
+@search-filters-tooltip-bg--bottom: #BF5820;
+@search-filters-tooltip-bg--fallback: #D37D33;
+
+/********** END OF SEARCH FILTERS STYLES **********/
+
+
+
+
+
+
+
+
+/********** START OF SEARCH FILTER MODALS STYLES **********/
+
+@search-filters-modal-width: 420px;
+@search-filters-modal-bg: #FFF;
+@search-filters-modal-padding: 10px;
+@search-filters-modal-border-color: #B5B2AD;
+@search-filters-modal-border-radius: 5px;
+@search-filters-modal-footer-bg: #FFF;
+@search-filters-modal-footer-border-radius: 0;
+
+@btn-modal-submit-color: #FFF;
+@btn-modal-submit-border-color: #282425;
+
+@btn-modal-submit-gradient--top: @secondary-gradient--top;
+@btn-modal-submit-gradient--bottom: @secondary-gradient--bottom;
+@btn-modal-submit-gradient--fallback: @secondary-gradient--fallback;
+
+@btn-modal-submit-gradient--top--hover: @btn-search-gradient--bottom;
+@btn-modal-submit-gradient--bottom--hover: @btn-search-gradient--bottom;
+@btn-modal-submit-gradient--fallback--hover: @btn-search-gradient--bottom;
+
+@btn-modal-cancel-gradient--top: @timeslots--disabled-gradient--top;
+@btn-modal-cancel-gradient--bottom: @timeslots--disabled-gradient--bottom;
+@btn-modal-cancel-gradient--fallback: @timeslots--disabled-gradient--fallback;
+
+@btn-modal-cancel-gradient--top--hover: @timeslots--disabled-gradient--top;
+@btn-modal-cancel-gradient--bottom--hover: @timeslots--disabled-gradient--bottom;
+@btn-modal-cancel-gradient--fallback--hover: @timeslots--disabled-gradient--fallback;
+
+/********** END OF SEARCH FILTER MODALS STYLES **********/
+
+
+
+
+
+
+
+
+
+/********** START OF SEARCH RESULTS STYLES **********/
+
+/**
+ * Search Results Header
+ */
+@search-results-container-margin: 15px;
+@search-results-header-color: #FFF;
+@search-results-header-gradient--top: @primary-gradient--top;
+@search-results-header-gradient--bottom: @primary-gradient--bottom;
+@search-results-header-gradient--fallback: @primary-gradient--fallback;
+@search-results-header-padding: 7px 10px;
+@search-results-header-border-color: @table-border-color;
+
+
+
+/**
+ * Applied Filters
+ */
+@applied-filter-color: #333;
+@applied-filter-bg-color: #FFF;
+@applied-filter-border-color: #CAD6A8;
+@applied-filter-border-radius: 3px;
+
+
+
+/**
+ * Search Results Table
+ */
+
+/* Header */
+@results-list-header-color: #FFF;
+@results-list-header-color--hover: #FFF;
+@results-list-header-gradient--top: #000;
+@results-list-header-gradient--bottom: #000;
+@results-list-header-gradient--fallback: #000;
+@results-list-header-border-style: solid;
+@results-list-header-border-color: #000;
+@results-list-header-inner-border-color: transparent;
+@results-list-header-inner-border-width: 0;
+@results-list-header-link-decoration: underline;
+@results-list-header-link-decoration--hover: none;
+@results-list-header-link-sorted: url('data:image/gif;base64,R0lGODlhCQAJAPAAAP///////yH5BAEAAAEALAAAAAAJAAkAAAIPjI8Gm7HQXmTn2XqRjKgAADs=');
+
+/* Results */
+@results-list-rest-name-color: #333;
+@results-list-rest-name-color--hover: @link-color;
+
+/********** END OF SEARCH RESULTS STYLES **********/
+
+
+
+
+
+
+
+
+/********** START OF SEARCH RESULTS MAP STYLES **********/
+
+@map-navigation-padding-veritcal: 4px;
+@map-navigation-padding-horizontal: 10px;
+@map-navigation-padding: @map-navigation-padding-veritcal @map-navigation-padding-horizontal;
+
+@map-results-width: 305px;
+
+@map-restaurant-booking-message-color: #333;
+@map-restaurant-booking-message-font-size: 12px;
+
+/********** END OF SEARCH RESULTS MAP STYLES **********/
+
+
+
+
+
+
+
+
+/********** START OF LITEBOX STYLES **********/
+
+@litebox-bg: #FFF;
+@litebox-padding: 8px 15px;
+@litebox-border: 1px solid #B8B4AC;
+@litebox-border-radius: 12px;
+@litebox-color: #000;
+@litebox-overlay-bg: rgba(255, 255, 255, 0.55);
+
+/********** END OF LITEBOX STYLES **********/
+
+
+
+
+
+
+
+
+/********** START OF CALENDAR **********/
+
+@calendar-bg: #FFF;
+@calendar-color: #333;
+@calendar-padding: 0;
+@calendar-border-width: 2px;
+@calendar-border-color: #B3B3B3;
+@calendar-title-height: 30px;
+@calendar-title-line-height: 20px;
+@calendar-title-gradient: #B3B3B3;
+@calendar-title-gradient--top: #4D4D4D;
+@calendar-title-gradient--bottom: #000;
+@calendar-title-gradient--fallback: #4D4D4D;
+
+/********** END OF CALENDAR **********/
+
+
+
+
+
+
+
+
+/********** START OF POP **********/
+
+@poptable-header-gradient--top: @primary-gradient--top;
+@poptable-header-gradient--bottom: @primary-gradient--bottom;
+@poptable-header-gradient--fallback: @primary-gradient--fallback;
+
+@poptable-title-color: #FFF;
+@poptable-link-color: #FFF;
+@poptable-link-color--hover: #CADCEB;
+
+@poptable-bg: #FFF;
+@poptable-border-color: @table-border-color;
+
+@poptable-first-row-border: none;
+@poptable-last-row-border: 1px dashed @poptable-border-color;
+
+@poptable-see-all-link: @link-color;
+@poptable-see-all-link--hover: @link-color--hover;
+
+/********** END OF POP **********/
+
+
+
+
+
+
+
+
+/********** START OF DINERS CHOICE STYLES **********/
+
+@diners-choice-search-location--color: #FFF;
+@diners-choice-search-container-gradient--top: @search-container-gradient--top;
+@diners-choice-search-container-gradient--bottom: @search-container-gradient--bottom;
+@diners-choice-search-container-gradient--fallback: @search-container-gradient--fallback;
+
+@diners-choice-search-control-bg: #FFF;
+
+@diners-choice-change-location-bar-gradient--top: @search-container-gradient--top;
+@diners-choice-change-location-bar-gradient--bottom: @search-container-gradient--bottom;
+@diners-choice-change-location-bar-gradient--fallback: @search-container-gradient--fallback;
+
+@diners-choice-search-control-input-gradient--top: #FFF;
+@diners-choice-search-control-input-gradient--bottom: #E6E6E6;
+@diners-choice-search-control-input-gradient--fallback: #FFF;
+
+@diners-choice-results-list-header-bg: #000;
+
+/********** END OF DINERS CHOICE STYLES **********/
+
+
+
+
+
+
+
+
+/********** START OF CUISINE LANDING PAGE STYLES **********/
+
+@clp-search-control-bg: #B9D37C;
+
+/********** END OF CUISINE LANDING PAGE STYLES **********/
+
+
+
+
+
+
+
+
+/********** START OF API ERROR PAGE STYLES **********/
+
+@error-page-letter-spacing: 0;
+@error-page-h1-font-size: 2em;
+
+/********** END OF API ERROR PAGE STYLES **********/
+
+
+
+
+
+
+
+
+/********** START OF A/B TESTING STYLES **********/
+
+@sort-buttons-row-fill-color: #000;
+@sort-buttons-box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 1);
+
+/********** END OF A/B TESTING STYLES **********/
+
+
+
+
+
+
+
+
+/********** START OF REST PROFILE STYLES **********/
+
+@restprofile-restaurant-container-width: 630px;
+@restprofile-restaurant-container-width--full: 100%;
+
+@restprofile-h2-color: #333;
+
+@restprofile-booking-box-wrapper-padding: 0;
+@restprofile-booking-box-wrapper-border: none;
+
+@restprofile-booking-box-h2-color: #FFF;
+@restprofile-booking-box-gradient--top: #05939A;
+@restprofile-booking-box-gradient--bottom: #26BCBD;
+@restprofile-booking-box-gradient--fallback: #05939A;
+@restprofile-booking-box-border-radius: 6px;
+@restprofile-booking-box-padding: 15px 15px 0 15px;
+
+@restprofile-search-control-background-color: #007E83;
+@restprofile-search-control-border-radius: 4px;
+@restprofile-search-control-block-border-color: #B3B3B3;
+@restprofile-search-control-block-margin-top: 3px;
+@restprofile-search-control-btn-search-padding: 8px 15px;
+@restprofile-search-control-btn-search-margin-top: 3px;
+@restprofile-search-control-btn-search-font-size: 12px;
+
+@restprofile-tabnav-tab-gradient--top: #4D4D4D;
+@restprofile-tabnav-tab-gradient--bottom: #000;
+@restprofile-tabnav-tab-gradient--fallback: #4D4D4D;
+@restprofile-tabnav-tab-background--selected: #FFF;
+@restprofile-tabnav-tab-border: none;
+@restprofile-tabnav-tab-color: #FFF;
+@restprofile-tabnav-tab-color--selected: #333;
+
+@restprofile-restaurant-details-gradient--top: #E6E6E6;
+@restprofile-restaurant-details-gradient--bottom: #E6E6E6;
+@restprofile-restaurant-details-gradient--fallback: #E6E6E6;
+
+/********** END OF REST PROFILE STYLES **********/

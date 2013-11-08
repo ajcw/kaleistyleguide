@@ -1,0 +1,104 @@
+@import "../_imports";
+
+.star-rating-container {
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    overflow: hidden;
+
+    .stars {
+        display: block;
+        background-image: url('@{image-path}/@{domain}/icons/star_filled.svg');
+        background-repeat: repeat-x;
+
+        &.stars-blank {
+            background-image: url('@{image-path}/@{domain}/icons/star_empty.svg');
+            background-repeat: repeat-x;
+        }
+    }
+}
+
+.star-rating-small {
+    .stars {
+        height: 11px;
+        background-size: 12px 11px;
+
+        &.stars-blank {
+            width: 60px;
+        }
+    }
+}
+
+.star-rating-medium {
+    .stars {
+        height: 17px;
+        background-size: 18px 17px;
+
+        &.stars-blank {
+            width: 90px;
+        }
+    }
+}
+
+.star-rating-large {
+    .stars {
+        height: 23px;
+        margin-right: 12px;
+        background-size: 24px 23px;
+
+        &.stars-blank {
+            width: 120px;
+        }
+    }
+}
+
+.reviews {
+    display: block;
+    margin: -1px 0 0 6px;
+    float: left;
+}
+
+.stars {
+    display: block;
+    float: left;
+
+    &.stars-blank {
+        position: relative;
+        width: 100%;
+    }
+
+    &.stars-filled {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    &.s0_0                  { width: 0%; }
+    &.s0_1, &.s0_2          { width: 5%; }
+    &.s0_3, &.s0_4          { width: 8%; }
+    &.s0_5, &.s0_6, &.s0_7  { width: 11%; }
+    &.s0_8, &.s0_9          { width: 13%; }
+    &.s1_0                  { width: 19%; }
+    &.s1_1, &.ss1_2         { width: 25%; }
+    &.s1_3, &.ss1_4         { width: 27%; }
+    &.s1_5, &.ss1_6, &.s1_7 { width: 30%; }
+    &.s1_8, &.ss1_9         { width: 32%; }
+    &.s2_0                  { width: 39%; }
+    &.s2_1, &.s2_2          { width: 45%; }
+    &.s2_3, &.s2_4          { width: 48%; }
+    &.s2_5, &.s2_6, &.s2_7  { width: 51%; }
+    &.s2_8, &.s2_9          { width: 53%; }
+    &.s3_0                  { width: 59%; }
+    &.s3_1, &.s3_2          { width: 65%; }
+    &.s3_3, &.s3_4          { width: 68%; }
+    &.s3_5, &.s3_6, &.s3_7  { width: 71%; }
+    &.s3_8, &.s3_9          { width: 73%; }
+    &.s4_0                  { width: 79%; }
+    &.s4_1, &.s4_2          { width: 84%; }
+    &.s4_3, &.s4_4          { width: 87%; }
+    &.s4_5, &.s4_6, &.s4_7  { width: 90%; }
+    &.s4_8, &.s4_9          { width: 93%; }
+    &.s5_0                  { width: 100%; }
+}

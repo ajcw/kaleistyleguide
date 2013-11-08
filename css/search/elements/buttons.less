@@ -1,0 +1,178 @@
+@import "../_imports";
+
+/*
+# Search button
+```
+<button id="find_a_table" class="btn btn-search">Find a table</button>
+```
+# Disabled button
+```
+<button id="find_a_table" class="btn btn-search disabled">Find a table</button>
+```
+# Small search button
+```
+<button id="find_a_table" class="btn btn-search-small">Find a table</button>
+```
+# Thin button
+```
+<button id="find_a_table" class="btn btn-search btn-thin">Find a table</button>
+```
+# Cancel button
+```
+<button id="find_a_table" class="btn btn-cancel">Cancel</button>
+```
+# Modal submit button
+```
+<button id="find_a_table" class="btn btn-modal submit">Submit</button>
+```
+# Modal cancel button
+```
+<button id="find_a_table" class="btn btn-modal cancel">Cancel</button>
+```
+
+*/
+
+.btn {
+    display: inline-block;
+    padding: 4px 15px;
+    border-radius: 4px;
+
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    line-height: 17px;
+
+    .no-select();
+
+    &.hover,
+    &:hover {
+        background: #000;
+    }
+
+    &.active,
+    &:active {
+        background: #444;
+    }
+
+    &.disabled,
+    &[disabled] {
+        color: #888;
+        text-shadow: none;
+        opacity: 0.7;
+        border: 1px solid #BBB;
+        background: #AAA;
+    }
+
+    &.btn-thin {
+        padding: 0 15px;
+        font-size: 11px;
+    }
+
+    +.or {
+        margin: 0 6px;
+    }
+}
+
+.btn-search,
+.btn-search-small {
+    padding: 9px 15px;
+    border: 1px solid @btn-search-border-color;
+    color: @btn-search-color;
+    font-size: 12px;
+    line-height: 14px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+
+    .gradient(
+        @btn-search-gradient--top,
+        @btn-search-gradient--bottom,
+        @btn-search-gradient--fallback
+    );
+
+    &.hover,
+    &:hover {
+        background: @btn-search-gradient--bottom;
+    }
+
+    &.active,
+    &:active {
+        background: @btn-search-gradient--top;
+    }
+}
+
+.btn-search-small {
+    padding: 4px 15px;
+    line-height: 16px;
+    font-size: 12px;
+}
+
+.btn-cancel {
+    .gradient(
+        @timeslots-gradient--top,
+        @timeslots-gradient--bottom,
+        @timeslots-gradient--fallback
+    );
+
+    &.active,
+    &:active {
+        .gradient(
+            @timeslots--disabled-gradient--top,
+            @timeslots--disabled-gradient--bottom,
+            @timeslots--disabled-gradient--fallback
+        );
+    }
+}
+
+.btn-modal {
+    width: 106px;
+    padding: 0;
+    border: 1px solid #B8B4AC;
+    margin: 2px 0;
+    line-height: 17px;
+
+    font-size: 11px;
+    white-space: nowrap;
+    overflow: hidden;
+
+    &.submit {
+        color: @btn-modal-submit-color;
+        .gradient(
+            @btn-modal-submit-gradient--top,
+            @btn-modal-submit-gradient--bottom,
+            @btn-modal-submit-gradient--fallback
+        );
+
+        &.hover,
+        &:hover {
+            border-color: @btn-modal-submit-border-color;
+            .gradient(
+                @btn-modal-submit-gradient--top--hover,
+                @btn-modal-submit-gradient--bottom--hover,
+                @btn-modal-submit-gradient--fallback--hover
+            );
+        }
+    }
+
+    &.cancel {
+        font-weight: normal;
+        .gradient(
+            @btn-modal-cancel-gradient--top,
+            @btn-modal-cancel-gradient--bottom,
+            @btn-modal-cancel-gradient--fallback
+        );
+
+        &:hover {
+        }
+
+        &.hover,
+        &:hover {
+            border-color: #282425;
+            .gradient(
+                @btn-modal-cancel-gradient--top--hover,
+                @btn-modal-cancel-gradient--bottom--hover,
+                @btn-modal-cancel-gradient--fallback--hover
+            );
+        }
+    }
+}

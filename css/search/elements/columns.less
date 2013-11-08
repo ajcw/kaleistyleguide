@@ -1,0 +1,49 @@
+﻿.columns {
+    width: 100%;
+    overflow: hidden;
+}
+
+.col {
+    padding: 0;
+    list-style: none;
+    margin: 0 3% 0 0;
+    float: left;
+
+    &.col-no-margin {
+        margin-right: 0;
+    }
+
+    &.col-double-margin {
+        margin-right: 6%;
+    }
+}
+
+.col-2 {
+    .col {
+        width: 46%;
+    }
+}
+
+.col-3 {
+    .col {
+        width: 30%;
+    }
+}
+
+.col-4 {
+    .col {
+        width: 22.7%;
+    }
+}
+
+.col-5 {
+    .col {
+        width: 17.6%;
+    }
+
+    &.col-no-margin {
+        .col {
+            width: 20%;
+        }
+    }
+}

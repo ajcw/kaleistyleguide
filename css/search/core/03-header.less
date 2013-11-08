@@ -1,0 +1,80 @@
+@import "../_imports";
+
+.global-header {
+    width: 100%;
+    position: relative;
+    margin: @global-header-margin-top 0 0 0;
+    overflow: hidden;
+    z-index: 1;
+
+    .logo-link {
+        position: relative;
+        margin: @logo-margin;
+        float: left;
+    }
+
+    .tagline {
+        margin-top: @global-header-tagline-margin-top;
+        margin-left: @global-header-tagline-margin-left;
+        color: @global-header-tagline-color;
+        font-size: @global-header-tagline-font-size;
+        font-weight: @global-header-tagline-font-weight;
+        float: left;
+    }
+
+    .ad-iframe {
+        margin: 0 auto @ad-placeholder-margin-bottom auto;
+        display: block;
+        clear: both;
+    }
+
+}
+
+.global-nav {
+    position: relative;
+    margin-top: @global-nav-top;
+    margin-right: @global-nav-right;
+    float: right;
+    z-index: 1;
+}
+
+.global-nav-link {
+    padding: @global-nav-link-padding;
+    color: @global-nav-color;
+    text-align: center;
+    text-decoration: @global-nav-link-text-decoration;
+    line-height: @global-nav-link-line-height;
+    min-height: @global-nav-link-min-height;
+    float: left;
+
+    &:hover {
+        text-decoration: @global-nav-link-text-decoration--hover;
+    }
+
+    &.last {
+        padding-right: 0;
+    }
+
+    + .global-nav-link {
+        background-image: @global-nav-link-background;
+        background-repeat: no-repeat;
+        background-position: 0 50%;
+    }
+
+}
+
+.global-nav-icon {
+    font-size: 14px;
+    min-width: 14px;
+    text-decoration: none;
+
+    &:hover {
+        opacity: 0.75;
+        text-decoration: none;
+    }
+
+    i {
+        // Text inside the link is the fallback for older browsers (<IE8)
+        display: none;
+    }
+}

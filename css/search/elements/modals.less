@@ -1,0 +1,73 @@
+@import "../_imports";
+
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: @search-filters-modal-width;
+    padding: @search-filters-modal-padding;
+    background: @search-filters-modal-bg;
+    border: 1px solid @search-filters-modal-border-color;
+    border-radius: @search-filters-modal-border-radius;
+    display: none;
+    overflow: hidden;
+    z-index: 1;
+
+    .translateZHack();
+
+    h3 {
+        margin-top: 0;
+    }
+
+    .sub-title {
+        margin-bottom: 10px;
+        font-size: 12px;
+        display: block;
+    }
+
+    .see-all-locations-link,
+    .change-location-link {
+        color: @link-color;
+        margin-right: 20px;
+        cursor: pointer;
+        float: right;
+
+        &:hover {
+            color: @link-color--hover;
+        }
+    }
+
+    .group {
+        width: 90%;
+    }
+
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+
+    .footer {
+        background: @search-filters-modal-footer-bg;
+        border-radius: @search-filters-modal-footer-border-radius;
+        margin-top: 15px;
+        text-align: center;
+        clear: both;
+    }
+}
+
+.modal-list {
+    padding: 0;
+    margin: 10px 0;
+    list-style: none;
+
+    li {
+        margin: 1px 0;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+}

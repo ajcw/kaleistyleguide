@@ -1,0 +1,697 @@
+@domain: 'ot';
+@image-path: '/s/content/images';
+
+
+
+/**
+ * ======================
+ *  TABLE OF CONTENTS
+ * ======================
+ *
+ * - Theme Variables
+ *
+ * - Core
+ * - Typography
+ * - Breadcrumbs
+ * - Forms
+ * - Tables
+ * - Timeslots
+ * - Buttons
+ * - Loader
+ *
+ * - Search Control
+ * - Search Control Tabs
+ * - Search Filters
+ * - Search Filter Modals
+ * - Search Results
+ * - Search Results Map
+ *
+ * - LiteBox
+ * - Calendar
+ *
+ * - POP
+ * - Diners Choice
+ * - API error page
+ * - A/B Tests
+ *
+ */
+
+
+
+
+
+/********** START OF THEME VARIABLES STYLES **********/
+
+@link-color: #42382C;
+@link-color--hover: #900;
+@error-color: #F00;
+@offer-color: #C06;
+@disabled-color: #B8B4AC;
+@line-color: #B8B4AC;
+@component-border-radius: 6px;
+
+@table-border-color: #DCD9D6;
+
+@primary-gradient--top: #CCD7AB;
+@primary-gradient--bottom: #F8FAF4;
+@primary-gradient--fallback: #CCD7AB;
+
+@secondary-gradient--top: #CCD7AB;
+@secondary-gradient--bottom: #CCD7AB;
+@secondary-gradient--fallback: #CCD7AB;
+
+/********** END OF THEME VARIABLES STYLES **********/
+
+
+
+/********** START OF CORE STYLES **********/
+
+/**
+ * Body
+ */
+@body-bg-color: #867F75;
+@body-color: #111;
+@body-font-size: 11px;
+@body-font-family: Verdana, Arial, sans-serif;
+
+
+
+/**
+ * Page Wrapper
+ */
+@page-wrapper-width: 980px;
+@page-wrapper-bg-color: #FEFCF7;
+@page-wrapper-border-radius: 9px;
+@page-wrapper-margin-top: 28px;
+
+
+
+/**
+ * Global Header
+ */
+@global-header-margin-top: 10px;
+@global-header-tagline-color: #5B4B3E;
+@global-header-tagline-margin-top: 30px;
+@global-header-tagline-margin-left: 10px;
+@global-header-tagline-font-size: 14px;
+@global-header-tagline-font-weight: normal;
+
+
+
+/**
+ * Logo Position
+ */
+@logo-margin: 20px 0 28px 18px;
+
+
+
+/**
+ * Global Header Navigation
+ */
+@global-nav-top: 7px;
+@global-nav-right: 20px;
+@global-nav-color: #900;
+@global-nav-link-padding-top: 1px;
+@global-nav-link-padding: @global-nav-link-padding-top 0 0 7px;
+@global-nav-link-border-color: transparent;
+@global-nav-link-text-decoration: underline;
+@global-nav-link-text-decoration--hover: none;
+@global-nav-link-background: none;
+@global-nav-social-icon-display: block;
+@global-nav-link-line-height: 12px;
+@global-nav-link-min-height: 14px;
+@global-nav-link-padding-top--help: @global-nav-link-padding-top + 1;
+
+
+/**
+ * Global Footer
+ */
+@global-footer-color: #FFF;
+@global-footer-bg-color: @body-bg-color;
+@global-footer-text-decoration: underline;
+@global-footer-text-decoration--hover: none;
+
+@global-seofooter-background-color: @page-wrapper-bg-color;
+@global-seofooter-color: @link-color;
+@global-seofooter-h4-color: #61584E;
+@global-seofooter-text-decoration: underline;
+@global-seofooter-text-decoration--hover: underline;
+
+
+
+/**
+ * Placeholder advert - to be removed
+ */
+@ad-placeholder-margin-bottom: 13px;
+
+/********** END OF CORE STYLES **********/
+
+
+
+
+
+
+
+
+/********** START OF BREADCRUMBS STYLES **********/
+
+@breadcrumbs-color: #333;
+@breadcrumbs-bg-color: #E6E3CD;
+@breadcrumbs-padding: 6px 0 6px 20px;
+@breadcrumbs-border-bottom-width: 2px;
+@breadcrumbs-border-bottom-color: #867F75;
+@breadcrumbs-text-decoration: underline;
+@breadcrumbs-text-decoration--hover: none;
+
+/********** END OF BREADCRUMBS STYLES **********/
+
+
+
+
+
+
+
+
+/********** START OF FORM STYLES **********/
+
+@form-element-border-color: #798065;
+@text-input-padding-top: 2px;
+@text-input-padding-left: 8px;
+@select-padding: 1px;
+@select-line-height: 19px;
+@select-gradient--top: #FFF;
+@select-gradient--bottom: #FFF;
+@select-gradient--fallback: #FFF;
+
+/********** END OF FORM STYLES **********/
+
+
+
+
+
+
+
+
+/********** START OF TIMESLOTS STYLES **********/
+
+@timeslots-color: #000;
+
+/* NORMAL */
+@timeslots-gradient--top: #FCFBFB;
+@timeslots-gradient--bottom: #CBC8C2;
+@timeslots-gradient--fallback: #FCFBFB;
+@timeslots-border-color: #B8B4AC;
+
+/* HOVER */
+@timeslots--hover-gradient--top: #F1F1ED;
+@timeslots--hover-gradient--bottom: #F9F9F7;
+@timeslots--hover-gradient--fallback: #F1F1ED;
+@timeslots--hover-border-color: #F1F1ED;
+
+/* ACTIVE */
+@timeslots--active-gradient--top: #F3EEE0;
+@timeslots--active-gradient--bottom: #F6F6F3;
+@timeslots--active-gradient--fallback: #F3EEE0;
+@timeslots--active-border-color: #ECECEC;
+
+/* DISABLED */
+@timeslots--disabled-gradient--top: #F1F1ED;
+@timeslots--disabled-gradient--bottom: #F9F9F7;
+@timeslots--disabled-gradient--fallback: #F1F1ED;
+@timeslots--disabled-border-color: #F1F1ED;
+
+/* 1000 Points */
+@timeslots-pts-color: #8A371D;
+@timeslots-pts-font-size: 8px;
+
+/********** END OF TIMESLOTS STYLES **********/
+
+
+
+
+
+
+
+
+/********** START OF BUTTON STYLES **********/
+
+@btn-search-color: #FFF;
+@btn-search-padding: 1px 16px 4px;
+@btn-search-gradient--top: #AD3333;
+@btn-search-gradient--bottom: #811313;
+@btn-search-gradient--fallback: #AD3333;
+@btn-search-border-color: #867F75;
+@btn-search-border-radius: 3px 3px 0 0;
+
+/********** END OF BUTTON STYLES **********/
+
+
+
+
+
+
+
+
+
+/********** START OF LOADER **********/
+
+@loader-bg-color: #FFFCE6;
+@loader-content-color: #900;
+@loader-content-opacity: 0.4;
+@loader-content-display--search: block;
+@loader-content-display--interim: block;
+
+@loader-border--interim: 10px solid #867F75;
+
+@interim-loader-image-path: '@{image-path}/@{domain}/interim-loader.gif';
+@search-loader-image-path: '@{image-path}/@{domain}/interim-loader.gif';
+
+/********** END OF LOADER **********/
+
+
+
+
+
+
+
+
+
+/********** START OF CHANGE LOCATION BAR **********/
+
+@change-location-bar-padding: 5px 10px;
+@change-location-bar-border: 1px solid #DCD9D6;
+@change-location-bar-border-radius: 4px;
+@change-location-bar-margin-bottom: 10px;
+
+@change-location-bar-gradient--top: #EBECE6;
+@change-location-bar-gradient--bottom: #FEFCF7;
+@change-location-bar-gradient--fallback: #EBECE6;
+
+@change-location-bar-link-color--hover: @link-color;
+
+/********** END OF CHANGE LOCATION BAR **********/
+
+
+
+
+
+
+
+
+
+/********** START OF SEARCH CONTROL STYLES **********/
+
+
+/**
+ * Search Container
+ */
+@search-container-padding-vertical: 6px;
+@search-container-padding-horizontal: 15px;
+@search-container-gradient--top: #C0CE9A;
+@search-container-gradient--bottom: #C0CE9A;
+@search-container-gradient--fallback: #C0CE9A;
+
+/**
+ * Change Location Bar
+ */
+@search-control-change-location-bar-color: @link-color;
+@search-control-change-location-bar-color--hover: @link-color--hover;
+@search-control-change-location-bar-bg-color: #CAD6A6;
+@search-control-change-location-bar-font-size: @body-font-size;
+@search-control-change-location-bar-border-bottom: 2px solid #C8DBAC;
+@search-control-change-location-bar-padding: 7px 15px 8px 15px;
+@search-control-change-location-link-margin-left: 15px;
+
+
+/**
+ * Search Element
+ */
+@search-control-block-border-color: #798065;
+@search-control-block-border-color--labels: #DAE7C9;
+@search-control-block-padding: 9px 14px 11px 0;
+@search-control-block-input-color: #42382C;
+@search-control-block-input-margin-bottom: 5px;
+@search-control-block-input-color-word-spacing: -0.09em;
+@search-control-block-select-height: 20px;
+@search-control-block-select-padding: 0;
+@search-control-block-label-color: #42382C;
+@search-control-block-span-color: #333;
+@search-control-block-span-margin-left: 16px;
+
+@search-control-btn-margin-top: 25px;
+
+/********** END OF SEARCH CONTROL STYLES **********/
+
+
+
+
+
+
+
+
+
+/********** START OF SEARCH CONTROL TABS STYLES **********/
+
+@search-tabs-bg-color-top: #E0E9D1;
+@search-tabs-bg-color-bottom: #E0E9D1;
+@search-tabs-bg-color-fallback: #E0E9D1;
+@search-tabs-border-color: #E0E9D1;
+@search-tabs-line-height: 16px;
+@search-tabs-color: @link-color;
+@search-tabs-color--hover: @link-color--hover;
+@search-tabs-color--selected: #333;
+@search-tabs-bg-color--selected: #FFF;
+@search-tabs-border-color--selected: #FFF;
+@search-tabs-border-bottom-color--selected: #FFF;
+
+/********** END OF SEARCH CONTROL TABS STYLES **********/
+
+
+
+
+
+
+
+
+/********** START OF SEARCH FILTERS STYLES **********/
+
+@search-filters-width: 178px;
+@search-filters-more-link-color: @link-color;
+@search-filters-more-link-color--hover: @link-color--hover;
+
+@search-filters-inner-bg: #FFF;
+
+@search-filters-link--selected-color: #FFF;
+@search-filters-link--selected-background: #BF5820;
+
+@search-filters-header-gradient--top: @primary-gradient--top;
+@search-filters-header-gradient--bottom: @primary-gradient--bottom;
+@search-filters-header-gradient--fallback: @primary-gradient--fallback;
+@search-filters-header-border-color: @table-border-color;
+@search-filters-header-inner-border-color: #FFF;
+@search-filters-header-inner-border-width: 1px 1px 0 1px;
+
+@search-filters-tooltip-padding: 10px;
+@search-filters-tooltip-bg--top: #D37D33;
+@search-filters-tooltip-bg--bottom: #BF5820;
+@search-filters-tooltip-bg--fallback: #D37D33;
+
+/********** END OF SEARCH FILTERS STYLES **********/
+
+
+
+
+
+
+
+
+/********** START OF SEARCH FILTER MODALS STYLES **********/
+
+@search-filters-modal-width: 420px;
+@search-filters-modal-bg: #FFF;
+@search-filters-modal-padding: 10px;
+@search-filters-modal-border-color: #B5B2AD;
+@search-filters-modal-border-radius: 5px;
+@search-filters-modal-footer-bg: #B8B4AC;
+@search-filters-modal-footer-border-radius: 3px;
+
+@btn-modal-submit-color: #000;
+@btn-modal-submit-border-color: #282425;
+
+@btn-modal-submit-gradient--top: @timeslots--disabled-gradient--top;
+@btn-modal-submit-gradient--bottom: @timeslots--disabled-gradient--bottom;
+@btn-modal-submit-gradient--fallback: @timeslots--disabled-gradient--fallback;
+
+@btn-modal-submit-gradient--top--hover: @timeslots--disabled-gradient--top;
+@btn-modal-submit-gradient--bottom--hover: @timeslots--disabled-gradient--bottom;
+@btn-modal-submit-gradient--fallback--hover: @timeslots--disabled-gradient--fallback;
+
+@btn-modal-cancel-gradient--top: @timeslots--disabled-gradient--top;
+@btn-modal-cancel-gradient--bottom: @timeslots--disabled-gradient--bottom;
+@btn-modal-cancel-gradient--fallback: @timeslots--disabled-gradient--fallback;
+
+@btn-modal-cancel-gradient--top--hover: @timeslots--disabled-gradient--top;
+@btn-modal-cancel-gradient--bottom--hover: @timeslots--disabled-gradient--bottom;
+@btn-modal-cancel-gradient--fallback--hover: @timeslots--disabled-gradient--fallback;
+
+/********** END OF SEARCH FILTER MODALS STYLES **********/
+
+
+
+
+
+
+
+
+
+/********** START OF SEARCH RESULTS STYLES **********/
+
+/**
+ * Search Results Header
+ */
+@search-results-container-margin: 15px;
+@search-results-header-color: @link-color;
+@search-results-header-gradient--top: @primary-gradient--top;
+@search-results-header-gradient--bottom: @primary-gradient--bottom;
+@search-results-header-gradient--fallback: @primary-gradient--fallback;
+@search-results-header-padding: 8px 11px;
+@search-results-header-border-color: @table-border-color;
+
+
+
+/**
+ * Applied Filters
+ */
+@applied-filter-color: @link-color;
+@applied-filter-bg-color: #FFF;
+@applied-filter-border-color: #CAD6A8;
+@applied-filter-border-radius: 3px;
+
+
+
+/**
+ * Search Results Table
+ */
+
+/* Header */
+@results-list-header-color: @link-color;
+@results-list-header-color--hover: @link-color--hover;
+@results-list-header-gradient--top: #E2EBD3;
+@results-list-header-gradient--bottom: #EAF1DD;
+@results-list-header-gradient--fallback: #E2EBD3;
+@results-list-header-border-style: dashed;
+@results-list-header-border-color: @table-border-color;
+@results-list-header-inner-border-color: #FFF;
+@results-list-header-inner-border-width: 1px 1px 0 1px;
+@results-list-header-link-decoration: none;
+@results-list-header-link-decoration--hover: underline;
+@results-list-header-link-sorted: url('data:image/gif;base64,R0lGODlhCQAJAPABAGFYTv///yH5BAEAAAEALAAAAAAJAAkAAAIPjI8Gm7HQXmTn2XqRjKgAADs=');
+
+/* Results */
+@results-list-rest-name-color: #000;
+@results-list-rest-name-color--hover: #900;
+
+/********** END OF SEARCH RESULTS STYLES **********/
+
+
+
+
+
+
+
+
+/********** START OF SEARCH RESULTS MAP STYLES **********/
+
+@map-navigation-padding-veritcal: 4px;
+@map-navigation-padding-horizontal: 10px;
+@map-navigation-padding: @map-navigation-padding-veritcal @map-navigation-padding-horizontal;
+
+@map-results-width: 305px;
+
+@map-restaurant-booking-message-color: #DC9038;
+@map-restaurant-booking-message-font-size: 12px;
+
+/********** END OF SEARCH RESULTS MAP STYLES **********/
+
+
+
+
+
+
+
+
+/********** START OF LITEBOX STYLE **********/
+
+@litebox-bg: #FFF;
+@litebox-padding: 8px 15px;
+@litebox-border: 1px solid #B8B4AC;
+@litebox-border-radius: 12px;
+@litebox-color: #000;
+@litebox-overlay-bg: rgba(255, 255, 255, 0.55);
+
+/********** END OF LITEBOX STYLE **********/
+
+
+
+
+
+
+
+
+/********** START OF CALENDAR **********/
+
+@calendar-bg: #FFF;
+@calendar-color: #333;
+@calendar-padding: 0;
+@calendar-border-width: 1px;
+@calendar-border-color: #111;
+@calendar-title-height: 23px;
+@calendar-title-line-height: 1;
+@calendar-title-gradient--top: #9CADBD;
+@calendar-title-gradient--bottom: #9CADBD;
+@calendar-title-gradient--fallback: #9CADBD;
+
+/********** END OF CALENDAR **********/
+
+
+
+
+
+
+
+
+/********** START OF POP **********/
+
+@poptable-header-gradient--top: #F9F0DA;
+@poptable-header-gradient--bottom: #FEF8E9;
+@poptable-header-gradient--fallback: #F9F0DA;
+
+@poptable-title-color: #BF5820;
+@poptable-link-color: #42382C;
+@poptable-link-color--hover: @link-color--hover;
+
+@poptable-bg: #FEF8E9;
+@poptable-border-color: #B8B4AC;
+
+@poptable-first-row-border: 1px dashed #F7DEAF;
+@poptable-last-row-border: 1px solid #B8B4AC;
+
+@poptable-see-all-link: @link-color;
+@poptable-see-all-link--hover: @link-color--hover;
+
+/********** END OF POP **********/
+
+
+
+
+
+
+
+
+/********** START OF DINERS CHOICE STYLES **********/
+
+@diners-choice-search-location--color: #BF5820;
+@diners-choice-search-container-gradient--top: #FAEFD7;
+@diners-choice-search-container-gradient--bottom: #FEF8E9;
+@diners-choice-search-container-gradient--fallback: #FAEFD7;
+
+@diners-choice-search-control-bg: #FEF8E9;
+
+@diners-choice-change-location-bar-gradient--top: transparent;
+@diners-choice-change-location-bar-gradient--bottom: transparent;
+@diners-choice-change-location-bar-gradient--fallback: transparent;
+
+@diners-choice-search-control-input-gradient--top: #FFF;
+@diners-choice-search-control-input-gradient--bottom: #FFF;
+@diners-choice-search-control-input-gradient--fallback: #FFF;
+
+@diners-choice-results-list-header-bg: #FAEFD8;
+
+/********** END OF DINERS CHOICE STYLES **********/
+
+
+
+
+
+
+
+
+/********** START OF CUISINE LANDING PAGE STYLES **********/
+
+@clp-search-control-bg: #B9D37C;
+
+/********** END OF CUISINE LANDING PAGE STYLES **********/
+
+
+
+
+
+
+
+
+/********** START OF API ERROR PAGE STYLES **********/
+
+@error-page-letter-spacing: -1px;
+@error-page-h1-font-size: 1.7em;
+
+/********** END OF API ERROR PAGE STYLES **********/
+
+
+
+
+
+
+
+
+/********** START OF A/B TESTING STYLES **********/
+
+@sort-buttons-row-fill-color: @table-border-color;
+@sort-buttons-box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.5);
+
+/********** END OF A/B TESTING STYLES **********/
+
+
+
+
+
+
+
+
+/********** START OF REST PROFILE STYLES **********/
+
+@restprofile-restaurant-container-width: 630px;
+@restprofile-restaurant-container-width--full: 100%;
+
+@restprofile-h2-color: #42382C;
+
+@restprofile-booking-box-wrapper-padding: 1px;
+@restprofile-booking-box-wrapper-border: 1px solid #CAC7C1;
+
+@restprofile-booking-box-h2-color: #42382C;
+@restprofile-booking-box-gradient--top: #C4D88E;
+@restprofile-booking-box-gradient--bottom: #C4D88E;
+@restprofile-booking-box-gradient--fallback: #C4D88E;
+@restprofile-booking-box-border-radius: 6px;
+@restprofile-booking-box-padding: 15px 15px 0 15px;
+
+@restprofile-search-control-background-color: #B6C984;
+@restprofile-search-control-border-radius: 4px;
+@restprofile-search-control-block-border-color: #798065;
+@restprofile-search-control-block-margin-top: 2px;
+@restprofile-search-control-btn-search-padding: 8px 15px 9px 15px;
+@restprofile-search-control-btn-search-margin-top: 2px;
+@restprofile-search-control-btn-search-font-size: 12px;
+
+@restprofile-tabnav-tab-gradient--top: #E4ECC9;
+@restprofile-tabnav-tab-gradient--bottom: #D0DFA2;
+@restprofile-tabnav-tab-gradient--fallback: #E4ECC9;
+@restprofile-tabnav-tab-background--selected: #FEFCF7;
+@restprofile-tabnav-tab-border: 1px solid #FFF;
+@restprofile-tabnav-tab-color: @link-color;
+@restprofile-tabnav-tab-color--selected: @link-color;
+
+@restprofile-restaurant-details-gradient--top: #F6F6F3;
+@restprofile-restaurant-details-gradient--bottom: #FEFCF7;
+@restprofile-restaurant-details-gradient--fallback: #F6F6F3;
+
+/********** END OF REST PROFILE STYLES **********/

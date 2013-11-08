@@ -1,0 +1,95 @@
+@import "../_imports";
+
+.search-tabs-control {
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+    height: 34px;
+    padding-right: 6px;
+    margin: 0;
+    list-style: none;
+    overflow: hidden;
+
+    .search-tab {
+        position: relative;
+        height: 32px;
+        .gradient(
+            @search-tabs-bg-color-top,
+            @search-tabs-bg-color-bottom,
+            @search-tabs-bg-color-fallback
+        );
+        border: 1px solid @search-tabs-border-color;
+        border-radius: @component-border-radius @component-border-radius 0 0;
+        margin-left: 20px;
+        line-height: @search-tabs-line-height;
+        float: left;
+
+        &:before,
+        &:after {
+            position: absolute;
+            bottom: -1px;
+            width: 6px;
+            height: 6px;
+            content: " ";
+            border: 1px solid @search-tabs-border-color;
+            z-index: 1;
+        }
+
+        &:before {
+            left: -7px;
+            border-bottom-right-radius: 6px;
+            border-width: 0 1px 1px 0;
+            box-shadow: 2px 2px 0 @search-tabs-border-color;
+        }
+        &:after {
+            right: -7px;
+            border-bottom-left-radius: 6px;
+            border-width: 0 0 1px 1px;
+            box-shadow: -2px 2px 0 @search-tabs-border-color;
+        }
+
+        &.selected {
+            background: @search-tabs-bg-color--selected;
+            border-color: @search-tabs-border-color--selected;
+            border-bottom-color: @search-tabs-border-bottom-color--selected;
+
+            &:before,
+            &:after {
+                border-color: @search-tabs-border-color--selected;
+            }
+            &:before {
+                box-shadow: 2px 2px 0 @search-tabs-border-bottom-color--selected;
+            }
+            &:after {
+                box-shadow: -2px 2px 0 @search-tabs-border-bottom-color--selected;
+            }
+
+            a {
+                color: @search-tabs-color--selected;
+
+                &:hover {
+                    color: @search-tabs-color--selected;
+                }
+            }
+        }
+
+        .icon {
+            margin-right: 4px;
+            float: left;
+        }
+
+        a {
+            color: @search-tabs-color;
+            display: block;
+            padding: 8px 18px 8px 12px;
+            font-size: 12px;
+            font-weight: bold;
+            text-decoration: none;
+
+            &:hover {
+                color: @search-tabs-color--hover;
+            }
+        }
+
+    }
+}

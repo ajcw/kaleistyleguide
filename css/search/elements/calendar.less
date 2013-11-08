@@ -1,0 +1,179 @@
+@import "../_imports";
+
+/*!
+ * Pikaday
+ * Copyright © 2012 David Bushell | BSD & MIT license | http://dbushell.com/
+ */
+
+.pika-single {
+    position: relative;
+    width: 180px;
+    background: @calendar-bg;
+    padding: @calendar-padding;
+    border: @calendar-border-width solid @calendar-border-color;
+    display: block;
+    color: @calendar-color;
+    font-family: Helvetica, Arial, sans-serif;
+    z-index: 9999;
+
+    &.is-hidden {
+        display: none;
+    }
+
+    &.is-bound {
+        position: absolute;
+        box-shadow: 0 5px 15px -5px rgba(0,0,0,.5);
+    }
+}
+
+.pika-title {
+    position: relative;
+    text-align: center;
+    .gradient(@calendar-title-gradient--top, @calendar-title-gradient--bottom, @calendar-title-gradient--fallback);
+
+    select {
+        position: absolute;
+        top: 5px;
+        left: 0;
+        margin: 0;
+        opacity: 0;
+        z-index: 9998;
+        cursor: pointer;
+    }
+
+    option {
+        color: #333;
+
+        &:disabled {
+            color: #CCC !important;
+        }
+    }
+}
+
+.pika-label {
+    position: relative;
+    padding: 5px 3px;
+    margin: 0;
+    display: inline-block;
+    *display: inline;
+    color: #FFF;
+    font-size: 12px;
+    line-height: @calendar-title-line-height;
+    font-weight: bold;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.pika-prev,
+.pika-next {
+    position: relative;
+    width: 20px;
+    height: @calendar-title-height;
+    padding: 0;
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: 0;
+    outline: none;
+    text-indent: 100%;
+    white-space: nowrap;
+    display: block;
+    cursor: pointer;
+    overflow: hidden;
+    *position: absolute;
+    *top: 0;
+
+    &.is-disabled {
+        opacity: .2;
+        cursor: default;
+    }
+}
+
+
+.pika-prev,
+.is-rtl .pika-next {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAALCAYAAACzkJeoAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAXklEQVQY03XNsQnCYBSF0dvoAjpDrMVlxHUkawRCWskWySRxCKtjo5Di/R/c5p3iBSl2xljBDasCHnj79T8e0eNjV3DBrCiYNAo6vFoYHPCsfu53x9bC4IqlhcEJwxdGIA0sQhxCAgAAAABJRU5ErkJggg==');
+    float: left;
+    *left: 0;
+}
+
+.pika-next,
+.is-rtl .pika-prev {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAALCAYAAACzkJeoAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAZUlEQVQY03XQsQmDYBCG4StMFjAzxDo4ik3IOiFrCPbiFjqJziBWT4qQRu5/4aqXj+/uAj1qxHnCjxmPkoQVz5KEA29cMvlnxL2KnC4i9lJyQpN1fnA9d254ZdsuaLM7B9yyD30BKiXy41XjejYAAAAASUVORK5CYII=');
+    float: right;
+    *right: 0;
+}
+
+.pika-select {
+    display: inline-block;
+    *display: inline;
+}
+
+.pika-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 0;
+
+    th,
+    td {
+        width: 14.285714285714286%;
+    }
+
+    th {
+        color: #999;
+        font-size: 12px;
+        line-height: 25px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    td {
+        border: 1px solid #E6E6E6;
+
+        &:last-child {
+            border-right: 1px solid @calendar-border-color;
+        }
+    }
+
+    abbr {
+        border: none;
+    }
+
+    .is-empty {
+        border: 0;
+    }
+}
+
+.pika-button {
+    width: 100%;
+    padding: 5px;
+    background: #FFF;
+    border: 0;
+    margin: -2px -2px 0 0;
+    outline: none;
+    display: block;
+    color: #333;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: right;
+    line-height: 15px;
+    cursor: pointer;
+
+    &:hover {
+        background: #FFF7CF !important;
+    }
+
+    .is-today & {
+    }
+
+    .is-selected & {
+        background: #FFEF9C !important;
+    }
+
+    .is-disabled & {
+        pointer-events: none;
+        cursor: default;
+        color: #CCC;
+    }
+}

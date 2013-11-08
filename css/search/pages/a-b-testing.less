@@ -1,0 +1,70 @@
+@import "../_imports";
+
+/**
+ * STYLES USED IN A/B TESTING SCENARIOS
+ *
+ * Once testing has been completed, move the their appropiate places.
+ * If this file gets too large, then we may have to figure out a better
+ * place to put these rules
+ */
+
+.sort-buttons {
+    position: relative;
+    top: 3px;
+    font-size: 12px;
+    font-weight: normal;
+    float: right;
+    z-index: 1;
+
+    .label {
+        margin-right: 8px;
+        font-weight: bold;
+    }
+
+    .header-cell-link {
+        padding: 3px 5px;
+        margin: 0;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &.sorted {
+            background: #FFF;
+            box-shadow: @sort-buttons-box-shadow;
+            color: #333;
+            font-weight: bold;
+            cursor: default;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.results-list {
+
+    .row-fill {
+        td {
+            background: @sort-buttons-row-fill-color;
+            padding: 1px;
+            border: none;
+        }
+    }
+
+    .first-row {
+        td {
+            border-top: none;
+        }
+    }
+}
+
+/* Hide the sort buttons for the map */
+#search_results_map {
+    .sort-buttons {
+        display: none;
+    }
+}

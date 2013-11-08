@@ -1,0 +1,34 @@
+/*
+# Search button
+```
+<button id="find_a_table" class="btn btn-search">Find a table</button>
+```
+# Disabled button
+```
+<button id="find_a_table" class="btn btn-search disabled">Find a table</button>
+```
+# Small search button
+```
+<button id="find_a_table" class="btn btn-search-small">Find a table</button>
+```
+# Thin button
+```
+<button id="find_a_table" class="btn btn-search btn-thin">Find a table</button>
+```
+# Cancel button
+```
+<button id="find_a_table" class="btn btn-cancel">Cancel</button>
+```
+# Modal submit button
+```
+<button id="find_a_table" class="btn btn-modal submit">Submit</button>
+```
+# Modal cancel button
+```
+<button id="find_a_table" class="btn btn-modal cancel">Cancel</button>
+```
+
+*/
+
+
+.btn{display:inline-block;padding:4px 15px;border-radius:4px;font-size:12px;font-weight:700;text-align:center;text-decoration:none;white-space:nowrap;line-height:17px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.btn.hover,.btn:hover{background:#000}.btn.active,.btn:active{background:#444}.btn.disabled,.btn[disabled]{color:#888;text-shadow:none;opacity:.7;border:1px solid #BBB;background:#AAA}.btn.btn-thin{padding:0 15px;font-size:11px}.btn+.or{margin:0 6px}.btn-search,.btn-search-small{padding:9px 15px;border:1px solid #000;color:#fff;font-size:12px;line-height:14px;text-shadow:1px 1px 1px rgba(0,0,0,.3);background:#000;background-image:-webkit-linear-gradient(top,#444 0%,#000 100%);background-image:-moz-linear-gradient(top,#444 0%,#000 100%);background-image:-o-linear-gradient(top,#444 0%,#000 100%);background-image:-ms-linear-gradient(top,#444 0%,#000 100%);background-image:linear-gradient(to bottom,#444 0%,#000 100%)}.btn-search.hover,.btn-search-small.hover,.btn-search:hover,.btn-search-small:hover{background:#000}.btn-search.active,.btn-search-small.active,.btn-search:active,.btn-search-small:active{background:#444}.btn-search-small{padding:4px 15px;line-height:16px;font-size:12px}.btn-cancel{background:#fcfbfb;background-image:-webkit-linear-gradient(top,#fcfbfb 0%,#cbc8c2 100%);background-image:-moz-linear-gradient(top,#fcfbfb 0%,#cbc8c2 100%);background-image:-o-linear-gradient(top,#fcfbfb 0%,#cbc8c2 100%);background-image:-ms-linear-gradient(top,#fcfbfb 0%,#cbc8c2 100%);background-image:linear-gradient(to bottom,#fcfbfb 0%,#cbc8c2 100%)}.btn-cancel.active,.btn-cancel:active{background:#f1f1ed;background-image:-webkit-linear-gradient(top,#f1f1ed 0%,#f9f9f7 100%);background-image:-moz-linear-gradient(top,#f1f1ed 0%,#f9f9f7 100%);background-image:-o-linear-gradient(top,#f1f1ed 0%,#f9f9f7 100%);background-image:-ms-linear-gradient(top,#f1f1ed 0%,#f9f9f7 100%);background-image:linear-gradient(to bottom,#f1f1ed 0%,#f9f9f7 100%)}.btn-modal{width:106px;padding:0;border:1px solid #B8B4AC;margin:2px 0;line-height:17px;font-size:11px;white-space:nowrap;overflow:hidden}.btn-modal.submit{color:#fff;background:#000;background-image:-webkit-linear-gradient(top,#444 0%,#000 100%);background-image:-moz-linear-gradient(top,#444 0%,#000 100%);background-image:-o-linear-gradient(top,#444 0%,#000 100%);background-image:-ms-linear-gradient(top,#444 0%,#000 100%);background-image:linear-gradient(to bottom,#444 0%,#000 100%)}.btn-modal.submit.hover,.btn-modal.submit:hover{border-color:#282425;background:#000;background-image:-webkit-linear-gradient(top,#000 0%,#000 100%);background-image:-moz-linear-gradient(top,#000 0%,#000 100%);background-image:-o-linear-gradient(top,#000 0%,#000 100%);background-image:-ms-linear-gradient(top,#000 0%,#000 100%);background-image:linear-gradient(to bottom,#000 0%,#000 100%)}.btn-modal.cancel{font-weight:400;background:#f1f1ed;background-image:-webkit-linear-gradient(top,#f1f1ed 0%,#f9f9f7 100%);background-image:-moz-linear-gradient(top,#f1f1ed 0%,#f9f9f7 100%);background-image:-o-linear-gradient(top,#f1f1ed 0%,#f9f9f7 100%);background-image:-ms-linear-gradient(top,#f1f1ed 0%,#f9f9f7 100%);background-image:linear-gradient(to bottom,#f1f1ed 0%,#f9f9f7 100%)}.btn-modal.cancel.hover,.btn-modal.cancel:hover{border-color:#282425;background:#f1f1ed;background-image:-webkit-linear-gradient(top,#f1f1ed 0%,#f9f9f7 100%);background-image:-moz-linear-gradient(top,#f1f1ed 0%,#f9f9f7 100%);background-image:-o-linear-gradient(top,#f1f1ed 0%,#f9f9f7 100%);background-image:-ms-linear-gradient(top,#f1f1ed 0%,#f9f9f7 100%);background-image:linear-gradient(to bottom,#f1f1ed 0%,#f9f9f7 100%)}

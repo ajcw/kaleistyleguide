@@ -1,0 +1,63 @@
+@import "../_imports";
+
+.timeslot .time {
+    background-image: url('@{image-path}/@{domain}/ie/timeslot-bg.gif');
+    background-repeat: repeat-x;
+}
+
+.timeslot .time.offer {
+    background-image: url('@{image-path}/@{domain}/offers_flag.png');
+    background-position: top right, 0 0;
+    background-repeat: no-repeat, repeat-x;
+
+    &:hover {
+        background-image: url('@{image-path}/@{domain}/offers_flag.png');
+    }
+}
+
+.star-rating-small {
+    .stars {
+        background-image: url('@{image-path}/@{domain}/ie/star_filled_small.png');
+
+        &.stars-blank {
+            background-image: url('@{image-path}/@{domain}/ie/star_empty_small.png');
+        }
+    }
+}
+
+.star-rating-medium {
+    .stars {
+        background-image: url('@{image-path}/@{domain}/ie/star_filled_medium.png');
+
+        &.stars-blank {
+            width: 84px;
+            background-image: url('@{image-path}/@{domain}/ie/star_empty_medium.png');
+        }
+    }
+}
+
+.star-rating-large {
+    .stars {
+        background-image: url('@{image-path}/@{domain}/ie/star_filled_large.png');
+
+        &.stars-blank {
+            background-image: url('@{image-path}/@{domain}/ie/star_empty_large.png');
+        }
+    }
+}
+
+.tooltip-offers {
+    border: 1px solid #CCC;
+}
+
+.icon.icon--close {
+    background-image: url('@{image-path}/icons/close_popup.gif');
+}
+
+.results-list-header {
+    .header-cell-link {
+        &.sorted {
+            background-image: url('@{image-path}/@{domain}/icons/sorted-by.gif');
+        }
+    }
+}

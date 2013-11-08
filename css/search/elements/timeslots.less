@@ -1,0 +1,97 @@
+@import "../_imports";
+
+.timeslots {
+    display: block;
+}
+
+.timeslot {
+    margin: 0 3px 0 0;
+    list-style: none;
+    display: block;
+    float: left;
+    text-align: center;
+
+    .no-select;
+
+    .timeslot-link {
+        text-decoration: none;
+    }
+
+    .time {
+        position: relative;
+        width: 41px;
+        height: 17px;
+        line-height: 17px;
+        border: 1px solid @timeslots-border-color;
+        border-radius: 3px;
+        display: block;
+
+        .gradient(
+            @timeslots-gradient--top,
+            @timeslots-gradient--bottom,
+            @timeslots-gradient--fallback
+        );
+
+        color: @timeslots-color;
+        font-size: 11px;
+        text-align: center;
+        white-space: nowrap;
+
+        cursor: pointer;
+
+        &.hover,
+        &:hover {
+            border-color: #282425;
+            .gradient(
+                @timeslots--disabled-gradient--top,
+                @timeslots--disabled-gradient--bottom,
+                @timeslots--disabled-gradient--fallback
+            );
+        }
+
+        &.active,
+        &:active {
+            .gradient(
+                @timeslots--disabled-gradient--top,
+                @timeslots--disabled-gradient--bottom,
+                @timeslots--disabled-gradient--fallback
+            );
+        }
+
+        &.disabled,
+        &[disabled] {
+            text-shadow: none;
+            border: 1px solid @timeslots--disabled-border-color;
+            .gradient(
+                @timeslots--disabled-gradient--top,
+                @timeslots--disabled-gradient--bottom,
+                @timeslots--disabled-gradient--fallback
+            );
+            cursor: auto;
+
+            .offer {
+                /* display: none; */
+            }
+        }
+
+        &.exact {
+            width: 74px;
+            font-weight: bold;
+        }
+
+        .offer {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 9px;
+            height: 9px;
+            background-image: url('@{image-path}/@{domain}/offers_flag.png');
+            background-repeat: no-repeat;
+        }
+    }
+
+    .pts {
+        color: @timeslots-pts-color;
+        font-size: @timeslots-pts-font-size;
+    }
+}

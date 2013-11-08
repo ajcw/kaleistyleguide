@@ -1,0 +1,37 @@
+@import "../_imports";
+
+.search-container {
+    position: relative;
+    margin-bottom: 15px;
+    color: @search-control-change-location-bar-color;
+    .gradient(
+        @search-container-gradient--top,
+        @search-container-gradient--bottom,
+        @search-container-gradient--fallback
+    );
+
+    .change-location-bar {
+        background: @search-control-change-location-bar-bg-color;
+        padding: @search-control-change-location-bar-padding;
+        border: none;
+        border-bottom: @search-control-change-location-bar-border-bottom;
+        border-radius: 0;
+        margin-bottom: 0;
+        color: @search-control-change-location-bar-color;
+        font-size: 16px;
+
+        .change-location-link {
+            padding-right: 10px;
+            margin-left: @search-control-change-location-link-margin-left;
+            color: inherit;
+            font-size: @search-control-change-location-bar-font-size;
+            float: none;
+            cursor: pointer;
+
+            &:hover {
+                color: @search-control-change-location-bar-color--hover;
+                text-decoration: underline;
+            }
+        }
+    }
+}

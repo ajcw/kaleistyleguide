@@ -1,0 +1,16 @@
+@import "../_imports";
+
+.timeslot .time {
+    background-image: url('@{image-path}/@{domain}/browsers/timeslot-bg.gif');
+    background-repeat: repeat-x;
+}
+
+.timeslot .time.offer {
+    background-image: url('@{image-path}/@{domain}/offers_flag.png'), url('@{image-path}/@{domain}/browsers/timeslot-bg.gif');
+    background-position: top right, 0 0;
+    background-repeat: no-repeat, repeat-x;
+
+    &:hover {
+        background-image: url('@{image-path}/@{domain}/offers_flag.png');
+    }
+}

@@ -1,0 +1,251 @@
+@import "../_imports";
+
+h2 {
+    color: @restprofile-h2-color;
+    margin: 15px 0;
+}
+
+.restaurant-container {
+    width: 630px;
+    float: left;
+
+    .full& {
+        width: 100%;
+    }
+}
+
+.booking-box-wrapper {
+    padding: @restprofile-booking-box-wrapper-padding;
+    border: @restprofile-booking-box-wrapper-border;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.booking-box {
+    background: #C4D88E;
+
+    .gradient(
+        @restprofile-booking-box-gradient--top,
+        @restprofile-booking-box-gradient--bottom,
+        @restprofile-booking-box-gradient--fallback
+    );
+
+    padding: 15px 15px 0 15px;
+    border-radius: 6px;
+
+    h2 {
+        margin: 0;
+        font-size: 18px;
+        color: @restprofile-booking-box-h2-color;
+    }
+}
+
+.search-control {
+    width: 575px;
+    padding: 10px;
+    background: @restprofile-search-control-background-color;
+    border-radius: 4px;
+    margin: 15px 0;
+    float: left;
+
+    .block {
+        border-color: @restprofile-search-control-block-border-color;
+        margin-top: @restprofile-search-control-block-margin-top;
+        margin-right: 8px;
+    }
+
+    input[type="text"],
+    select {
+        padding: 3px 2px;
+        background: #FFF;
+    }
+
+    .icon {
+        margin: 4px 4px 0 0;
+    }
+
+    .btn-search {
+        padding: @restprofile-search-control-btn-search-padding;
+        margin-top: @restprofile-search-control-btn-search-margin-top;
+        font-size: @restprofile-search-control-btn-search-font-size;
+    }
+}
+
+.tabnav-tabs {
+
+    .tabnav-tab {
+        width: 110px;
+        bottom: -3px;
+
+        .gradient(
+            @restprofile-tabnav-tab-gradient--top,
+            @restprofile-tabnav-tab-gradient--bottom,
+            @restprofile-tabnav-tab-gradient--fallback
+        );
+
+        padding: 8px 0 8px 0;
+        border: @restprofile-tabnav-tab-border;
+        box-shadow: 0 -3px 3px rgba(0, 0, 0, .1);
+
+        color: @restprofile-tabnav-tab-color;
+        font-size: 11px;
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+
+        &.selected {
+            padding: 8px 0 10px 0;
+            background: @restprofile-tabnav-tab-background--selected;
+            color: @restprofile-tabnav-tab-color--selected;
+        }
+    }
+}
+
+.wishlist {
+    clear: both;
+}
+
+
+.restaurant-card {
+    position: relative;
+
+    .restaurant-image {
+        width: 195px;
+        height: 210px;
+        margin-right: 15px;
+        float: left;
+    }
+
+    .restaurant-card-details {
+        width: 387px;
+        float: left;
+
+        h2 {
+            margin: 0 0 10px 0;
+        }
+    }
+
+    .restaurant-details {
+        .gradient(
+            @restprofile-restaurant-details-gradient--top,
+            @restprofile-restaurant-details-gradient--bottom,
+            @restprofile-restaurant-details-gradient--fallback
+        );
+
+        border-top: solid 1px #E9E9E2;
+        font-size: 12px;
+    }
+
+    .star-rating-container {
+        margin-bottom: 15px;
+    }
+
+    .reviews {
+        padding-top: 6px;
+        color: @link-color;
+    }
+
+    p {
+        margin-top: 2px;
+    }
+
+    .col {
+        width: 42.4%;
+        padding: 3%;
+    }
+
+    .launch-modal {
+        color: @link-color;
+        font-size: 90%;
+        cursor: pointer;
+    }
+}
+
+.restaurant-description {
+    p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+
+.foodspotting-photos {
+
+    img {
+        margin-right: 22px;
+    }
+}
+
+.content-block {
+    margin: 0 15px 15px 15px;
+    display: block;
+    clear: both;
+}
+
+.restaurant-description,
+.foodspotting-photos,
+.diners-awards,
+.diner-reviews {
+    border-top: 1px solid #DAD6D0;
+
+    a {
+        margin-top: 15px;
+        display: block;
+        color: @link-color;
+        text-decoration: none;
+    }
+}
+
+.diner-reviews {
+
+    .review {
+        margin-bottom: 15px;
+    }
+
+    .star-rating-container {
+        margin: 0 4px 0 0;
+        display: inline-block;
+    }
+
+    .description {
+        color: #61584E;
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .review-date {
+        margin-top: 4px;
+        display: block;
+        color: #867F75;
+    }
+}
+
+.getting-there-modal,
+.more-details-modal {
+    top: 195px;
+    left: 213px;
+    width: 440px;
+    border-color: #867F75;
+    font-size: 12px;
+
+    b,
+    span {
+        color: #666;
+    }
+
+    a {
+        font-size: 12px;
+    }
+
+    .detail {
+        margin-bottom: 8px;
+    }
+}
+
+.seo-response {
+    display: none;
+}
+
+.menuViewer {
+    margin-bottom: 40px;
+}

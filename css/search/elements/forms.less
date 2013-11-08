@@ -1,0 +1,61 @@
+@import "../_imports";
+
+input,
+select,
+textarea {
+
+    &:focus {
+        outline: none;
+    }
+}
+
+input[type="text"],
+textarea,
+select {
+    border: 1px solid @form-element-border-color;
+    color: inherit;
+    font-size: 12px;
+    font-weight: bold;
+    outline: none;
+}
+
+input[type="text"] {
+    color: inherit;
+    background: #FFF;
+    padding: @text-input-padding-top @text-input-padding-left;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: 13px;
+    height: 13px;
+    border: none;
+    margin: 1px 0 0 0;
+    float: left;
+    cursor: pointer;
+
+    + .label {
+        line-height: 15px;
+        margin-left: 16px;
+        display: block;
+        cursor: pointer;
+    }
+}
+
+input[type="radio"] {
+    + .label {
+        line-height: 16px;
+    }
+}
+
+select {
+    background: #FFF;
+    padding: @select-padding;
+    line-height: @select-line-height;
+
+    .gradient(
+        @select-gradient--top,
+        @select-gradient--bottom,
+        @select-gradient--fallback,
+    50%, 100%);
+}
