@@ -1,0 +1,27 @@
+{
+  "name": "kalei",
+  "version": "0.1.0",
+  "description": "OpenTable Pattern Library, using Kalei",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ajcw/kaleistyleguide.git"
+  },
+  "keywords": [
+    "opentable",
+    "styleguide",
+    "kalei"
+  ],
+  "author": "John Catterfeld",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/ajcw/kaleistyleguide/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-less": "~0.8.1"
+  }
+}
