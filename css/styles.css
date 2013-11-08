@@ -1,21 +1,14 @@
 /*
-# Kalei - Style guide
-## Generates bootstrap-like documentation for your own CSS!
+# Introduction
 
-This project aims at making sure your style sheets are fully documented whilst being synchronized with your webpages styles. To do this it actually uses your live stylesheets in so that at anytime you can review how your styleguide looks.
+Welcome to the prototype pattern library for OpenTable.
 
-This website is a live example generated from Kalei's style.css
-
-<iframe src="http://ghbtns.com//github-btn.html?user=thomasdavis&repo=kaleistyleguide&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="170px" height="30px"></iframe>
-
-<iframe src="http://ghbtns.com//github-btn.html?user=thomasdavis&repo=kaleistyleguide&type=fork&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="146px" height="30px"></iframe>
-
-## Getting started
-
-1. Download the repository (`git clone git://github.com/thomasdavis/kaleistyleguide.git`)
-2. Serve it on a HTTP server and it should work!
-3. Edit `js/config.js` to point at your own `styles.css` 
-
+## How it works
+- The base style.css, defined in the config.js is an index page for your styleguide. 
+- Navigation in the left column is generated from the H2s in these markdown comments.
+- The H1 at the bottom of these comments is the heading for the left column.
+- You can break the left nav by poorly formatting these comments, e.g. by indenting one of the H2s.
+- The actual styles for this library are in the file kalei.css.  This needs to be included in the core.css file (and probably needs tidying up) but only when used in this guide.  This is probably somethign Grunt can do.
 
 ## Example
 
@@ -38,70 +31,18 @@ Easily show off examples of your components and the HTML to generate them
 </div>
 ```
 
-## Main goals and benefits
-
-* Fully documented CSS - No need to explain the benefits
-* No dependencies, simply download the repository and run in your browser
-* Automatic generation of demo UI components
-* Easy access for anyone, designer, developer, manager and users
-* Rapid development of projects by allowing developers to find the correct CSS and HTML for any given UI component
-* Open sourced so that all great ideas can be included
-
-
-
-## Author
-
-[Thomas Davis](http://thomasdavis.github.com)
-
-<a style="" href="https://twitter.com/neutralthoughts" class="twitter-follow-button">Follow @neutralthoughts</a>
-<script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
-
-## Inspiration and alternatives
-
-Kalei is heavily influenced by the following projects and blog posts.
-
-[Pea.rs](http://pea.rs/)
-
-[KSS](http://warpspire.com/posts/kss/)
-
-[StyleDocco](http://jacobrask.github.com/styledocco/)
-
-[RJ Metrics](http://info.rjmetrics.com/blog/bid/52753/Our-Living-Style-Guide-Writing-maintainable-HTML-CSS)
-
-[Anchoring Your Design Language in a Live Style Guide](http://uxmag.com/articles/anchoring-your-design-language-in-a-live-style-guide)
-
-[Nadarei KSS](http://nadarei.co/nkss-rails/) - rails
-
-## Technologies 
-
-* [marked](https://github.com/chjj/marked)
-* [jscssp](http://www.glazman.org/JSCSSP/)
-* cssbeautify
-* [fixie](http://fixiejs.com/)
-* [highlight](http://softwaremaniacs.org/soft/highlight/en/)
-* [backbone](http://backbonejs.org/)
-* [underscore](http://underscorejs.org/)
-* [jquery](http://jquery.com)
-
-## License 
-
-Public domain: http://unlicense.org/
-
-## Stylesheets
+#OpenTable CSS pattern library
 
 */
 
-/* ### Kalei theme ### */
+/* ### Core ### */
 
-@import url("theme.css");
+@import url("search/core/core.css");
 
+/* ### Elements ### */
 
+@import url("search/elements/buttons.css");
 
+/* ### Components ### */
 
-/* ### Examples ### */
-
-@import url("buttons.css");
-@import url("fixie-demo.css");
-/* ### Third Party ### */
-
-@import url("highlight/styles/googlecode.css");
+@import url("search/components/price-modal.css");
